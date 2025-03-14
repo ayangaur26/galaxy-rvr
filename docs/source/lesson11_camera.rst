@@ -90,10 +90,10 @@ Here's how we can do it:
 
         .. code-block:: arduino
 
-        // AP Mode
-        #define WIFI_MODE WIFI_MODE_AP
-        #define SSID "GalaxyRVR"
-        #define PASSWORD "12345678"
+            // AP Mode
+            #define WIFI_MODE WIFI_MODE_AP
+            #define SSID "GalaxyRVR"
+            #define PASSWORD "12345678"
 
     * **STA Mode**: In this mode, the Rover connects to your home WiFi network. Remember that your controlling device (like a mobile phone or tablet) should also be connected to the same WiFi network. This mode allows your device to keep its regular internet access while controlling the Rover, but limits the Rover's operational range to your WiFi coverage area.
 
