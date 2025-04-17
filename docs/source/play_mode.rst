@@ -64,7 +64,7 @@
 
 #. 从 **APP Store(iOS)** 或 **Google Play(Android)** 安装 `SunFounder Controller <https://docs.sunfounder.com/projects/sf-controller/en/latest/>`_，或者扫描以下二维码，下载安装SunFounder Controller。
 
-        .. image:: img/app/qrcode.png
+        .. image:: img/app/qrcode_2.png
          :width: 60%
 
             
