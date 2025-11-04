@@ -75,30 +75,9 @@ html_css_files = [
     'https://ezblock.cc/readDocFile/custom.css',
 ]
 
-# pictures
-rst_epilog = """
-
-.. |app_connect| image:: /img/app/app_connect.jpg
-    :width: 20
-
-.. |app_save| image:: /img/app/app_save.jpg
-    :width: 20
-
-.. |app_run| image:: /img/app/app_run.png
-    :width: 20
-
-.. |app_edit| image:: /img/app/app_edit.jpg
-    :width: 20
-
-.. |app_set| image:: /img/app/app_set.png
-    :width: 20
-
-"""
-
-
 # open link in a new window
 
-rst_epilog += """
+rst_epilog = """
 
 .. |link_sf_facebook| raw:: html
 
