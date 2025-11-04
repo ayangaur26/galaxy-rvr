@@ -12,125 +12,110 @@
 
     👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
 
-Lesson 12 Camera System
+Lesson 12: See Through Your Rover's Eyes
 ================================================
 
-Welcome back, young explorers! In the last lesson, we equipped our GalaxyRVR with the ability to "nod" using a tilt mechanism. Now, it's time to give our Rover "eyes" - the camera!
+Now that your rover can nod its camera, let's give it real vision! In this lesson, you'll learn how to see exactly what your Mars Rover sees through its camera.
 
-In this thrilling journey, we'll dive into the setup of the Rover's camera system. You'll learn how to relay the visuals captured by the Rover's camera to the APP, so you can see exactly what the Rover sees in real-time. Imagine the excitement of experiencing the Martian landscape from the Rover's perspective!
-
-This offers an even more interactive and engaging experience with our GalaxyRVR. Stay tuned for more adventures!
-
+Watch live video from your rover's perspective as it explores - see Martian landscapes, discover interesting rocks, and navigate like a real space explorer!
 
 .. image:: img/11_camera_image.png
-
 
 Learning Objectives
 -------------------------
 
-* Learn how to accurately see everything the Mars Rover sees in real-time.
-* Understand how to combine camera input and servo control to enhance project interactivity.
+* View live camera footage from your Mars Rover in real-time
+* Combine camera viewing with servo control for interactive exploration
 
-
-Materials
------------
-
-* Smartphone or tablet
-* Mammoth Coding APP
-* GalaxyRVR
-
-
-Introduction to ESP32 CAM
+Meet Your Rover's Eyes: ESP32 CAM
 -------------------------------------------------------
 
-In our previous adventure, we equipped our Mars Rover with a pair of "eyes" by integrating the ESP32 CAM. Today, we're going to learn more about it and actually make it "see."
+Say hello to the ESP32 CAM - your rover's powerful vision system! This amazing module is like giving your rover super-smart eyes.
 
-.. image:: ../img/esp32_cam.png
+.. image:: img/esp32_cam.png
     :width: 400
     :align: center
 
-The ESP32 CAM, acting like the eyes of our Rover, is a small yet powerful module. Not only does it integrate Wi-Fi and Bluetooth functionalities, but it also comes with a compact camera. This camera helps our Rover capture images of its surroundings.
+The ESP32 CAM does two incredible things:
 
-Just like we use our eyes to observe our environment, the ESP32 CAM can "see" what lies ahead for the Rover, then send these visual data to our smartphone or computer. This allows us to see everything the Rover sees in real-time!
+1. **Takes photos and video** of whatever your rover is looking at
+2. **Sends the video** directly to your phone or computer
 
-It's as if we're piloting the Rover directly, observing not just the Rover itself, but also the world it explores! Incredible, isn't it? So, let's dive deeper into it...
-
+It's like being right there on Mars with your rover! You'll see everything it sees, in real time. Ready to start exploring through your rover's eyes?
 
 .. _camera_system:
 
-Exploring the Mars Rover Visual System
+Exploring Your Rover's Camera System
 ----------------------------------------------------
 
-1. Drag a ``turn camera ON`` block. Click it, and you'll see the background of the stage display the camera's feed.
+1. Drag a ``turn camera ON`` block and click it - watch the stage turn into a live camera view from your rover!
 
-.. image:: img/11_camera_on.png
-.. :align: center
+   .. image:: img/11_camera_on.png
 
-2. If you see the camera feed inverted, a ``set camera image orientation to inverted`` block can help you correct it.
+2. If the camera view appears upside down, use ``set camera image orientation to inverted`` to fix it.
 
-.. image:: img/11_camera_orientation.png
-.. :align: center
+   .. image:: img/11_camera_orientation.png
 
-3. Drag a ``turn camera LED ON`` block. Click it, and the LED next to the GalaxyRVR camera will light up.
+3. Need more light? Use ``turn camera LED ON`` to activate the camera's built-in light.
 
-.. image:: img/11_camera_led.png
-.. :align: center
+   .. image:: img/11_camera_led.png
 
-**Click the Sprite to Turn On the Camera**
+**Create Camera Control Buttons**
 
-1. Now that we know how to control the camera module, create four new sprites to control the camera and its LED. Adjust their sizes to make them look harmonious.
+1. Let's build a camera control panel! Create four sprites and arrange them neatly.
 
-.. image:: img/11_camera_4.png
-.. :align: center
+   .. image:: img/11_camera_4.png
 
-2. Program each sprite: clicking ball 1 will turn off the camera.
+2. Program each button:
 
-.. image:: img/11_camera_1sp.png
-.. :align: center
+   - Ball 1: Turns camera OFF
+   
+   .. image:: img/11_camera_1sp.png
+   
+   - Ball 2: Turns camera ON and sets orientation
+   
+   .. image:: img/11_camera_2sp.png
+   
+   - Balloon 1: Turns LED ON
+   
+   .. image:: img/11_camera_3sp.png
+   
+   - Balloon 2: Turns LED OFF
+   
+   .. image:: img/11_camera_4sp.png
 
-3. Clicking ball 2 will turn on the camera and set the image orientation.
+3. Save space by stacking the controls - they'll pop out when needed!
 
-.. image:: img/11_camera_2sp.png
-.. :align: center
+   .. image:: img/11_camera_fold.png
 
-4. Clicking ballon 3 will turn on the LED.
+4. Add ``go to back layer`` to each sprite - clicking one button reveals the next, creating a cool toggle effect.
 
-.. image:: img/11_camera_3sp.png
-.. :align: center
+   .. image:: img/11_camera_layer.png
 
-5. Clicking ballon 4 will turn off the LED.
+5. Click the stage expansion button to enter the full control mode.
 
-.. image:: img/11_camera_4sp.png
-.. :align: center
+   .. image:: img/11_camera_go_stage.png
 
-6. To save space on the stage, stack each set of controls.
+6. You'll now watch live video from your rover's perspective as it explores - see Martian landscapes, discover interesting rocks, and navigate like a real space explorer!
 
-.. image:: img/11_camera_fold.png
-.. :align: center
+   .. image:: img/11_camera_image.png
 
-7. Add a ``go to back layer`` block for each sprite. When clicked, the sprite will move to the back layer, revealing the next sprite, creating a toggle effect.
-
-.. image:: img/11_camera_layer.png
-.. :align: center
-
-
-
-Camera-Related Blocks
+Camera Control Blocks
 -------------------------------
 
-.. image:: img/block/camera_turn.png
+* Turn the camera on or off. When on, the stage shows live video from your rover!
 
-Turn on (or off) the camera module. Once activated, the stage background will change to the camera view.
+  .. image:: img/block/camera_turn.png
 
-.. image:: img/block/camera_led_turn.png
+* Control the camera's LED light - perfect for dark explorations.
 
-Turn on (or off) the supplemental LED on the camera module.
+  .. image:: img/block/camera_led_turn.png
 
+* Adjust how see-through the camera view appears.
 
-.. image:: img/block/camera_transp.png
+  .. image:: img/block/camera_transp.png
 
-Set the opacity of the camera view.
+* Flip the camera view if it appears upside down.
 
-.. image:: img/block/camera_orientation.png
+  .. image:: img/block/camera_orientation.png
 
-Set the orientation of the camera view. You can use this block to flip the view.

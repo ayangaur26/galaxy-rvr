@@ -12,18 +12,12 @@
 
     👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
 
-
-
-
-
-
-Lesson 7 IR Obstacle Animate
+Lesson 7: Create an IR Obstacle Animation
 =====================================================
 
-Previously, we used the Infrared Obstacle Avoidance Module to make GalaxyRVR automatically avoid obstacles, just like on a Mars exploration mission.
+In our previous missions, we used the Infrared Obstacle Avoidance Module to help our GalaxyRVR automatically steer clear of obstacles - just like a real Mars rover navigating the Red Planet!
 
-In this activity, we will combine the obstacle avoidance module with a stage to create an animation of a rover dodging rocks on Mars.
-
+Now, let's take this to the next level by combining the physical IR sensors with a virtual Martian landscape. We'll create an exciting animation game where you control a rover sprite by triggering the real IR sensors with your hands!
 
 .. raw:: html
 
@@ -32,107 +26,102 @@ In this activity, we will combine the obstacle avoidance module with a stage to 
       Your browser does not support the video tag.
    </video>
 
-
-
 Learning Objectives
 -------------------------
 
-* Gain a deeper understanding of the Infrared Obstacle Avoidance Module and its application in the Mars rover.
-* Learn how to read and apply data from the Infrared Obstacle Avoidance Module in Scratch.
-* Create a Mars exploration-themed obstacle avoidance game using the IR module and the Scratch stage.
+* Discover how the Infrared Obstacle Avoidance Module brings your Mars rover to life
+* Learn to use IR sensor data to control characters in your Scratch animations  
+* Build your own Mars exploration game where you dodge rocks using real sensors
+
+Creating the Animation Scene
+----------------------------
+
+#. First, :ref:`app_connect`.
+
+#. Setting up the Mars-themed background
+
+   * First, we need a Mars-themed stage background. Click to select a backdrop.
+
+     .. image:: img/5_animate_choose.png
+
+   * Choose the **Mars** background.
+
+     .. image:: img/5_animate_mars.png
+
+#. Adding the rover character
+
+   Choose the **GalaxyRVR** sprite from the library and resize it to fit your scene appropriately.
+
+   .. image:: img/5_animate_rvr.png
+
+#. Adding obstacles
+
+   Select a **Rocks** sprite from the library and adjust its size.
+
+   .. image:: img/5_animate_rock.png
 
 
-Materials
------------
+Programming the GalaxyRVR Sprite
+------------------------------------------
 
-* Smartphone or tablet
-* Mammoth Coding APP
-* GalaxyRVR
+Program your GalaxyRVR sprite to travel across the screen from left to right. Your mission: guide it safely past the rocks! 
+Use your hands to trigger the physical rover's IR sensors - right sensor moves the sprite down, left sensor moves it up.
 
+#. Set the starting position by moving the sprite to the left edge of the stage. The motion blocks will automatically update with the correct coordinates.
 
-Creating the Animation
---------------------------------------
+   .. image:: img/5_animate_glide.png
 
-1. First, we need a Mars-themed stage background. Click to select a backdrop.
+#. Add a forever block to create the main program loop that runs continuously.
 
-.. image:: img/5_animate_choose.png
+   .. image:: img/5_animate_forever.png
 
-2. Choose the Mars background.
+#. Include a conditional block to check if the rover is touching a rock obstacle.
 
-.. image:: img/5_animate_mars.png
+   .. image:: img/5_animate_touching.png
 
-3. Select the GalaxyRVR sprite from the library and adjust its size.
+#. If no rock is detected, keep moving forward toward the right side.
 
-.. image:: img/5_animate_rvr.png
+   .. image:: img/5_animate_moving.png
 
-4. Select a rock sprite from the library and adjust its size.
+#. If the rover hits a rock, stop all movement and display a warning message.
 
-.. image:: img/5_animate_rock.png
+   .. image:: img/5_animate_say.png
 
+#. Add sensor controls: create events for both IR sensors that move the sprite up (left sensor) or down (right sensor) when triggered by your hand.
 
-5. Next, let's program these two sprites:
+   .. image:: img/5_animate_y.png
 
+Programming the Rock Sprite
+------------------------------------
 
+Let's create multiple rock obstacles to make the game more challenging! We'll use cloning to generate rocks at random positions on the stage.
 
-**GalaxyRVR Sprite**
+#. Create rock clones using the "create clone of myself" block.
 
-The task for the GalaxyRVR sprite is to move slowly from the left side to the right side of the screen. If it touches a rock sprite, it will stop moving.
-During this process, we can trigger the two IR sensors on the physical rover with our hands. Triggering the right sensor makes the sprite move down a bit; triggering the left sensor makes it move up a bit.
+   .. image:: img/5_animate_clone.png
 
+#. Make each clone appear at a random location by adding the "go to random position" block.
 
+   .. image:: img/5_animate_clone_move.png
+      :width: 200
 
-a. When the green flag is clicked, it should appear on the far left of the screen. You can first move the sprite to the corresponding position on the stage, and the coordinate values of the block in the motion category will change accordingly.
+#. Generate ten rocks by repeating the clone creation ten times.
 
-.. image:: img/5_animate_glide.png
+   .. image:: img/5_animate_clone_10.png
+      :width: 200
 
-b. Place a forever block as the main loop.
+#. Set all this action to start when the green flag is clicked.
 
-.. image:: img/5_animate_forever.png
+   .. image:: img/5_animate_clone_flag.png    
+      :width: 200
 
-c. Drag a conditional block to check if it is touching the rock sprite.
+Mission Launch!
+----------------------------
 
-.. image:: img/5_animate_touching.png
+Congratulations! Your Mars obstacle avoidance game is ready for launch.
 
-d. If it is not touching, it moves forward.
+Connect your GalaxyRVR to the APP and click the green flag to begin your mission. Watch as rocks randomly appear across the Martian landscape.
 
-.. image:: img/5_animate_moving.png
+Your challenge: Use your hands to trigger the IR sensors and carefully guide the GalaxyRVR sprite across the screen. Move it up and down to avoid the rocks and reach the right side safely!
 
-e. If it touches, it stops and emits a shout.
-
-.. image:: img/5_animate_say.png
-
-f. Finally, add two events. When the left or right IR sensors detect an obstacle (your hand), the sprite moves up or down.
-
-.. image:: img/5_animate_y.png
-
-
-**Rocks Sprite**
-
-The task for the rock sprite is simpler. It can either stay in place, appear at random locations, or create multiple clones to increase the difficulty for the GalaxyRVR sprite.
-
-a. Create its clones.
-
-.. image:: img/5_animate_clone.png
-
-b. Then move to a random position. Combine these two blocks and click them. You'll notice new rocks appearing randomly on the stage.
-
-.. image:: img/5_animate_clone_move.png
-   :width: 200
-
-c. Generate ten random rocks.
-
-.. image:: img/5_animate_clone_10.png
-   :width: 200
-
-d. These actions occur when the green flag is clicked.
-
-.. image:: img/5_animate_clone_flag.png    
-   :width: 200
-
-Now, this mini-game is complete.
-
-Connect GalaxyRVR to the APP (refer to :ref:`app_connect`) and click the green flag to start the game.
-
-You will see many rocks randomly generated on the stage. Your task is to use your hands to trigger the two IR sensors,
-guiding GalaxyRVR to successfully reach the right side of the stage.
-
+Can you complete the mission without any collisions? How quickly can you navigate the obstacle course? Keep practicing to become a master Mars rover pilot!

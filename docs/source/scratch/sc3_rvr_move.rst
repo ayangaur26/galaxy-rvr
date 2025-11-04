@@ -12,18 +12,16 @@
 
     👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
 
-
-
 .. _rvr_move:
 
-Lesson 3 Remote Control Your GalaxyRVR
+Lesson 3: Remote Control Your GalaxyRVR
 ============================================
 
-In this lesson, we're bringing the Mars Rover to life!
+Get ready to take the controls! In this lesson, you'll become the mission commander of your very own GalaxyRVR Mars Rover.
 
-Using our coding skills, we'll guide our Rover across imagined Martian landscapes.
+We'll transform our coding knowledge into real-world action, programming your rover to navigate across simulated Martian terrain. Watch as your commands bring the rover to life, moving exactly as you direct it right here in the classroom.
 
-It's a Martian adventure in our classroom. Let's get started!
+This is where your Mars mission truly begins – let's start driving!
 
 .. raw:: html
 
@@ -32,230 +30,194 @@ It's a Martian adventure in our classroom. Let's get started!
       Your browser does not support the video tag.
    </video>
 
-
 Learning Objectives
 -----------------------
 
-* Guide students to download and upload the corresponding Arduino code to control the rover with the APP.
-* Learn to use the arrow keys in Mammoth Coding to control the rover's movements.
-* Implement basic movement controls for the rover: forward, backward, left turn, right turn.
-
-Materials
--------------
-
-* Smartphone or tablet
-* Mammoth Coding APP
-* GalaxyRVR
-* Computer
-
-
-Uploading the Basic Program to GalaxyRVR
--------------------------------------------------
-
-To control the GalaxyRVR with the APP, you need to upload a specific program using the Arduino IDE.
-
-Follow these steps on your computer:
-
-.. Download Arduino IDE
-.. ^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. #. Visit https://www.arduino.cc/en/software#future-version-of-the-arduino-ide .
-
-.. #. Download the IDE for your OS version.
-
-..     .. image:: img/sp_001.png
-
-.. #. Install it.
-
-..     .. image:: img/sp_005.png
-
-
-Uploading the Aduino Adapted Code
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-#. Turn on the GalaxyRVR's power switch.
-
-    .. raw:: html
-
-        <video width="600" loop autoplay muted>
-            <source src="../_static/video/play_start.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-
-#. Connect the Arduino and computer with a USB cable, and then turn the **upload** switch of the car to the upload end.
-
-    .. image:: ../img/camera_upload.png
-        :width: 500
-        :align: center
-
-    .. note:: It is the USB Type B port for connecting to Arduino, not the USB Type C port for charging.
-
-#. Check if you have completed :ref:`update_firmware` section.
-
-#. Open the downloaded ``galaxy-rvr-1.2.0 folder``. (It has been downloaded and installed in the previous step), double-click to run the ``update-arduino-firmware.bat`` script. A command prompt will open.
-
-    .. image:: ../img/firmware/updateFirmware.png
-
-#. In the command prompt, you will see a serial port list showing the serial ports that the computer is currently connected to. Enter the sequence number on the left side of the serial port list to select the serial port of the Arduino Uno. Press Enter to automatically upload.
-
-    .. image:: ../img/firmware/selectCOM.png
-
-#. After waiting for the upload to complete, you can unplug the USB cable.
-
-    .. image:: ../img/firmware/UNOupdating.png
-
-.. #. Turn the upload switch back and press the reset button, and the car is ready to use.
-
-
-.. note:: This code enables the GalaxyRVR to respond to APP commands. You won’t need to upload any more code in the subsequent chapters that use the Mammoth Coding APP.
-
+* Set up communication between the Mammoth Coding APP and your GalaxyRVR by uploading the necessary Arduino code
+* Master controlling your rover's movements using the arrow key interface in the APP
+* Program and execute the four fundamental rover maneuvers: forward, backward, left turn, and right turn
 
 .. _app_connect:
 
 Connecting the APP to GalaxyRVR
 -------------------------------------------
 
-1. To activate the ESP32 CAM, move the mode switch to the **Run** position, and press the **reset** button to reboot the R3 board. You will then observe a cyan light flashing on the bottom strip.
+.. note::  
 
-    .. raw:: html
+    * The GalaxyRVR's R3 board comes preloaded with communication firmware that enables connectivity with both the RoboPilot remote control APP and Mammoth Coding software. 
+    * If your board's firmware has been overwritten and you need to restore this communication capability, follow the steps in :ref:`restore_r3_firmware`.
+
+#. Start the GalaxyRVR.
+
+   * When using GalaxyRVR for the first time, it is recommended to fully charge the battery by plugging in a Type-C USB cable. Then, turn on the power.
+    
+     .. raw:: html
+
+        <video width="600" loop autoplay muted>
+            <source src="../_static/video/play_start.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+   * To activate the ESP32 CAM, switch the mode to **Run** and press the **reset** button to reboot the R3 board. You will see the light on the bottom strip start flashing, indicating that the device has started.
+
+     .. raw:: html
 
         <video width="600" loop autoplay muted>
             <source src="../_static/video/play_reset.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
 
-2. Connect your mobile device (e.g., phone, tablet) to the WiFi hotspot provided by GalaxyRVR. Generally, its SSID is ``GalaxyRVR`` and the password is ``12345678``.
+#. Connect to the ``GalaxyRVR`` Network
 
+   To establish communication between your mobile device and the Rover, connect to the GalaxyRVR's local network:
 
-    .. image:: ../img/firmware/SSID.png
+   * On your mobile device, select ``GalaxyRVR`` from available networks
+   * Enter password: ``12345678``
 
-    .. note:: The default connection mode is **AP mode**. After you've connected, there might be a prompt warning that there is no internet access on this network. If so, choose "Stay connected".
+     .. note::
 
-        .. image:: ../img/app/camera_stay.png
+         * This connects to the GalaxyRVR hotspot only (no internet access)
+         * If prompted, choose "Stay connected"
 
+     .. image:: ../img/camera_lan.png
+        :width: 500
 
-3. Open the APP. Click here.
+#. Open the application on your mobile device to begin the connection process.
 
-    .. image:: img/connet_app_04.png
+   .. image:: img/connet_app_04.png
 
+#. Select and load the GalaxyRVR extension within the APP.
 
-4. Load the GalaxyRVR module.
+   .. image:: img/connet_app_05.png
 
-    .. image:: img/connet_app_05.png
+#. The APP will automatically scan and search for available GalaxyRVR devices.
 
-5. The APP will search for your robot.
+   .. image:: img/connet_app_06.png
 
-    .. image:: img/connet_app_06.png
+#. Select your GalaxyRVR from the list to connect.
 
-6. Connect it.
+   .. image:: img/reconnect_2.png
 
-    .. image:: img/reconnect_2.png
-
-    .. note:: The breathing light on the GalaxyRVR can help indicate the connection status. Flashing yellow means no devices are connected. A steady blue light means it’s connected.
-
+   .. note:: 
+      
+      Connection status is indicated by the GalaxyRVR's LED lights:
+      
+      - **Flashing yellow**: Searching for connection
+      - **Steady blue**: Successfully connected and ready
 
 Re-connect APP
 -------------------------------------
 
 When your device is disconnected from GalaxyRVR, you will see this pop-up window appear in the interface. Click reconnect.
 
-    .. image:: img/reconnect_0.png
+   .. image:: img/reconnect_0.png
 
 If you close the pop-up window, you can also reconnect by clicking this button in the GalaxyRVR category.
 
-    .. image:: img/reconnect_1.png
+   .. image:: img/reconnect_1.png
 
 Find your GalaxyRVR and click connect.
 
-    .. image:: img/reconnect_2.png
+   .. image:: img/reconnect_2.png
 
 
 Controlling the GalaxyRVR with the APP
 -----------------------------------------
 
-1. In the Code interface, you'll find the GalaxyRVR category.
+1. In the coding interface, find the dedicated GalaxyRVR category containing all the rover control blocks.
 
-    .. image:: img/3_rvr_catego.png
+   .. image:: img/3_rvr_catego.png
 
-2. We've previously used the green flag to start programs. 
-During this process, you'll notice several blocks in the Events category that trigger code execution. 
-Find the ``when up arrow key pressed`` block.
+2. While we typically use the green flag to start programs, there are other ways to trigger actions. Find the ``when up arrow key pressed`` block in the Events category - this will execute code whenever you press that specific key.
 
-    .. image:: img/3_rvr_when_arrow.png
 
-3. Drag out four of these blocks, one for each arrow key event (up, down, left, right).
+   .. image:: img/3_rvr_when_arrow.png
 
-    .. image:: img/3_rvr_4_arrow.png
+3. Create four event blocks - one for each arrow direction (up, down, left, right). This will form the foundation of your rover's control system.
 
-    .. note:: You can click the eye icon below the green flag to hide the stage area and gain more coding space.
+   .. image:: img/3_rvr_4_arrow.png
+        :width: 800
+        :align: center
 
-4. Complete the code blocks for these four events. When the up arrow is pressed, make the GalaxyRVR move forward; when the left arrow is pressed, make it turn left, etc.
+   .. note:: Need more coding space? Click the eye icon below the green flag to temporarily hide the stage area.
 
-    .. image:: img/3_rvr_4_dir.png
+4. Now complete each event block with the corresponding movement command:
+   
+   - Up arrow → Move forward
+   - Down arrow → Move backward  
+   - Left arrow → Turn left
+   - Right arrow → Turn right
 
-5. Expand the stage by clicking this button.
+   .. image:: img/3_rvr_4_dir.png
+        :width: 800
+        :align: center
 
-    .. image:: img/3_rvr_stage.png
+5. Click the stage expansion button to enter the full control mode.
 
-6. You'll enter an interface with an enlarged stage and a set of direction keys.
+   .. image:: img/3_rvr_stage.png
 
-    .. image:: img/3_rvr_stage2.png
+6. You'll now see an enlarged stage with virtual direction keys. Press these keys and watch as you directly control your GalaxyRVR's movements in real-time!
 
-Press these direction keys and you'll be delighted to see you can directly control the GalaxyRVR.
+   .. image:: img/3_rvr_stage2.png
 
-Blocks Related to Movement
+
+Movement Control Blocks
 -----------------------------
 
-.. image:: img/block/move_forward.png 
-..    :align: center
+* **Basic Direction Control**
+  
+  Controls the GalaxyRVR's movement direction. Use the dropdown menu to select forward, backward, left turn, or right turn.
 
-After executing this block, the GalaxyRVR will move forward. You can:
+  .. image:: img/block/move_forward.png 
 
-    * Change the parameter from the dropdown menu to turn left, turn right, or reverse.
+* **Speed Setting**
+  
+  Sets the GalaxyRVR's movement speed. Note: This block only sets the speed and does not initiate movement by itself.
 
+  .. image:: img/block/move_set_speed.png     
 
-.. image:: img/block/move_set_speed.png     
-..    :align: center
-
-This block is used to set the moving speed of the GalaxyRVR. It does not initiate movement by itself.
-
-.. image:: img/block/move_forward_1s.png 
-..    :align: center
-
-After executing this block, the GalaxyRVR will move forward for 1 second. You can:
+* **Timed Movement**
+  
+  Makes the GalaxyRVR move in the selected direction for a specific duration. You can:
     
-    * Change the parameter from the dropdown menu to turn left, turn right, or reverse.
-    * Adjust the number in the block to set the duration of GalaxyRVR’s movement.
+  * Choose direction (forward/backward/left/right) from the dropdown
+  * Set movement duration by changing the time value
 
+  .. image:: img/block/move_forward_1s.png 
 
-.. image:: img/block/move_forward_80.png    
-..    :align: center
-
-After executing this block, the GalaxyRVR will move forward at 80% speed. You can:
+* **Speed-Controlled Movement**
+  
+  Moves the GalaxyRVR at a specific speed percentage. You can:
     
-    * Change the parameter from the dropdown menu to turn left, turn right, or reverse.
-    * Modify the number in the block to adjust the speed of GalaxyRVR during this movement.
+  * Select movement direction from the dropdown
+  * Adjust speed percentage (0-100%)
 
-.. image:: img/block/move_forward_80_1s.png 
-..    :align: center
+  .. image:: img/block/move_forward_80.png    
 
-After executing this block, the GalaxyRVR will move forward at 80% speed for 1 second. You can:
+* **Precise Movement Control**
+  
+  Combines speed and time control for precise movements. You can:
     
-    * Change the parameter from the dropdown menu to turn left, turn right, or reverse.
-    * Adjust the time in the block to set the duration of the movement.
-    * Modify the speed in the block to adjust the speed of GalaxyRVR during this movement.
+  * Set movement direction
+  * Adjust speed percentage
+  * Set movement duration
 
-.. image:: img/block/move_lr_sp_1s.png 
-..    :align: center
+  .. image:: img/block/move_forward_80_1s.png 
 
-After executing this block, you can independently set the speeds of the GalaxyRVR's left and right wheels and move for the specified time. You can:
+* **Advanced Wheel Control**
+  
+  Provides independent control over each wheel for complex maneuvers. You can:
     
-    * Modify the left speed to set the running speed of GalaxyRVR’s left wheel.
-    * Modify the right speed to set the running speed of GalaxyRVR’s right wheel.
-    * Adjust the time to determine the duration of the movement.
+  * Set left wheel speed separately
+  * Set right wheel speed separately  
+  * Control movement duration
 
-.. image:: img/block/move_stop.png
-..    :align: center
+  .. image:: img/block/move_lr_sp_1s.png 
 
-Stops the GalaxyRVR from moving.
+* **Emergency Stop**
+  
+  Immediately stops all GalaxyRVR movement.
+
+  .. image:: img/block/move_stop.png
+
 

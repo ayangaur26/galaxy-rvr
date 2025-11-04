@@ -12,18 +12,21 @@
 
     👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
 
-
 .. _ir_ultra_avoid:
-
 
 Lesson 8 Advanced Obstacle Avoidance
 ==================================================
 
-The obstacle avoidance module, as the name suggests, helps our Rover avoid obstacles. It detects obstacles by transmitting an infrared signal and then receiving the signal reflected back from the object. If there is an obstacle in front of the module, the infrared signal is reflected back, and the module detects it.
+Have you ever wondered how robots can navigate through rooms without bumping into furniture? Today, we're going to teach our Mars Rover to do just that! We'll combine two different types of sensors to create a super-smart obstacle avoidance system.
 
-Now, adding an ultrasonic sensor to the mix improves this system. Ultrasonic sensors measure distance by sending out a sound wave at a specific frequency and listening for that sound wave to bounce back. By recording the elapsed time between the sound wave being generated and the sound wave bouncing back, it is possible to calculate the distance between the sensor and the object.
+How Sensors Help Robots "See"
+------------------------------------------------
 
-Combining these two gives us a reliable, efficient, and versatile obstacle avoidance system!
+Let's think about how we use our senses:
+
+* **Infrared Sensors** work like bats using echolocation! They send out invisible infrared light and listen for it to bounce back from objects. If the light returns quickly, there's an obstacle nearby.
+
+* **Ultrasonic Sensors** work with sound waves we can't hear. They send out high-frequency sound and measure how long it takes to echo back. Longer time means the object is farther away.
 
 .. raw:: html
 
@@ -32,61 +35,60 @@ Combining these two gives us a reliable, efficient, and versatile obstacle avoid
         Your browser does not support the video tag.
     </video>
 
+When we use both sensors together, our Rover gets a much better understanding of its surroundings - just like using both your eyes and ears to navigate a dark room!
+
 Learning Objectives
 -------------------------
 
-* Combine ultrasonic and infrared obstacle avoidance modules to enable the basic obstacle avoidance function of the Mars Rover model.
-* Learn how to program the Mars Rover model to automatically sense and avoid obstacles.
+* Combine ultrasonic and infrared sensors to create an advanced obstacle avoidance system
+* Program your Mars Rover to automatically sense and navigate around obstacles
 
-
-Materials
------------
-
-* Smartphone or tablet
-* Mammoth Coding APP
-* GalaxyRVR
-
-Constructing Advanced Obstacle Avoidance Systems
+Building Our Super-Smart Rover
 -----------------------------------------------------------
 
-In previous lessons, we learned the basics of using infrared sensors for obstacle avoidance. We also explored the principles of ultrasonic modules. Now, we will put all these parts together to build an advanced obstacle avoidance system!
+Remember the obstacle avoidance program we created earlier? We're going to use that as our starting point and make it even better!
 
-Our enhanced Mars Rover will now navigate its surroundings using both ultrasonic and infrared sensors.
+#. First, :ref:`app_connect`.
 
-1. We can use the code block from :ref:`ir_obstacle` as a template. Open it from your saved projects.
+#. Now, let's open our previous infrared sensor project from :ref:`ir_obstacle` as a template. Click on "File" and find your saved IR obstacle avoidance project.
 
+   .. image:: img/7_avoid_open.png
 
-.. image:: img/7_avoid_open.png
+#. Before we make changes, let's save a copy so we don't lose our original work. Click "Save as a copy."
 
-2. Then, save it as a copy.
+   .. image:: img/7_avoid_save_copy.png
 
-.. image:: img/7_avoid_save_copy.png
+#. Give your new project a cool name like "Super Smart Rover" or "Advanced Obstacle Avoidance."
 
-3. Rename the project and save it.
+   .. image:: img/7_avoid_save_rename.png
 
-.. image:: img/7_avoid_save_rename.png
+#. Now let's add our ultrasonic sensor! Drag out the ``when distance < 15 cm`` block. This will be our "early warning system" that detects obstacles from farther away.
 
-4. Add distance detection using the ultrasonic sensor. Drag a ``when distance < 15 cm`` block.
+   .. image:: img/7_avoid_when.png
+       :width: 800
 
-.. image:: img/7_avoid_when.png
-    :width: 800
+#. To prevent confusion, we'll add a ``stop other scripts in sprite`` block. This ensures our Rover only follows one set of instructions at a time.
 
+   .. image:: img/7_avoid_stop.png
 
-5. Similarly, drag a ``stop other scripts in sprite`` block to ensure the GalaxyRVR only responds to one sensor at a time.
+#. When the ultrasonic sensor detects something close, we want our Rover to back up to a safe distance.
 
-.. image:: img/7_avoid_stop.png
+   .. image:: img/7_avoid_backward.png
 
-6. Move backward until reaching a safe distance.
+#. Now we need to turn away from the obstacle. The Rover will turn for one second - you can choose left or right turn!
 
-.. image:: img/7_avoid_backward.png
+   .. image:: img/7_avoid_turn.png
 
-7. Turn for one second (either left or right).
+#. Finally, we tell the Rover to continue moving forward on its new path.
 
-.. image:: img/7_avoid_turn.png
+   .. image:: img/7_avoid_go.png
 
-8. Move forward again.
+Amazing! Now you have a Rover that uses three sensors working together like a team:
 
-.. image:: img/7_avoid_go.png
+- The front ultrasonic sensor spots distant obstacles
+- The left IR sensor detects objects on the left side  
+- The right IR sensor watches the right side
 
-Now, the IR sensors on both sides and the ultrasonic sensor in the front will work together to form a powerful obstacle avoidance system, ensuring the GalaxyRVR does not collide with any obstacles during its missions.
+Test your program and watch how smoothly your Rover navigates around obstacles. Try creating an obstacle course and see if your Rover can complete it without any crashes!
 
+Challenge: Can you modify the turning time or distance to make your Rover even better at avoiding obstacles?

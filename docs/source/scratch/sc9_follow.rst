@@ -12,61 +12,58 @@
 
     👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
 
-
-
-
-Lesson 9 Mars Exploration Partner
+Lesson 9: Mars Exploration Partner
 ====================================================
 
+Now that our Rover can skillfully avoid obstacles, let's teach it a new trick - following a target! In this mission, we'll transform our obstacle-avoiding rover into a loyal companion that can follow you around.
 
-With our Rover now capable of avoiding obstacles, let's enhance it further by making it follow objects. Our goal is to modify our existing code to make the Rover move towards a moving object.
+What's the difference between following and avoiding?
 
-Ever wondered about the differences between a following system and an obstacle avoidance system?
+- **Avoiding**: Steer away from objects (like dodging rocks)
+- **Following**: Move toward objects (like following a friend)
 
-The key here is that in a following system, we want our Rover to move in response to detected objects, while in an obstacle avoidance system, we're looking to steer clear of detected objects.
-
+Get ready to code your very own Mars exploration buddy!
 
 Learning Objectives
 -------------------------
 
-* Combine ultrasonic and infrared obstacle avoidance modules to implement the following functionality in the Mars rover model.
-* Learn how to program the Mars rover model to automatically follow a target.
+* Combine ultrasonic and infrared sensors to create a following rover
+* Program your Mars Rover to automatically track and follow a moving target
 
-
-Materials
------------
-
-* Smartphone or tablet
-* Mammoth Coding APP
-* GalaxyRVR
-
-
-Coding the Intelligent Following System
+Creating Your Following Rover
 -------------------------------------------------------
 
-1. Use the code block from :ref:`ir_ultra_avoid` as a template and open it from the saved project.
+#. First, :ref:`app_connect`.
 
-.. image:: img/8_follow_open.png
+#. Now, open your saved project in Lesson 8.
 
-2. Then, save it as a copy.
+   .. image:: img/8_follow_open.png
 
-.. image:: img/8_follow_save_copy.png
+#. Save a copy to keep your original project safe. Click "Save as a copy."
 
-3. Rename the project and save it.
+   .. image:: img/8_follow_save_copy.png
 
-.. image:: img/8_follow_save_rename.png
+#. Give your new project a fun name like "Mars Follower" or "Rover Buddy."
 
-4. First, remove the forward block at the end of each code block, as the rover should stop after each sensor event.
+   .. image:: img/8_follow_save_rename.png
 
-.. image:: img/8_follow_save_remove_forward.png
+#. Remove the "move forward" blocks from the end of each sensor event. Our follower should stop and wait after each action.
 
-5. Next, modify the turning directions of the two IR events, as the GalaxyRVR needs to follow the direction of the target.
+   .. image:: img/8_follow_save_remove_forward.png
 
-.. image:: img/8_follow_save_re_turn.png
+#. Now let's reprogram the IR sensors! Change the turning directions so the rover turns TOWARD the target instead of away from it.
 
-6. Finally, modify the ultrasonic sensor events. Instead of backing up to a safe distance and turning, it should now move forward until the target moves out of range.
+   .. image:: img/8_follow_save_re_turn.png
 
-.. image:: img/8_follow_save_re_ultra.png
+#. Finally, update the ultrasonic sensor behavior. Instead of backing away, make it move FORWARD when it detects a target in front.
 
-Now, the GalaxyRVR will move along with your steps. When you are beside it, it will turn to face you. If you are in front of it, it will move towards you. If it cannot detect you, it will stay still.
+   .. image:: img/8_follow_save_re_ultra.png
 
+
+Amazing! Your GalaxyRVR is now your Mars exploration partner. Test it out:
+
+- Walk beside it → it turns to face you
+- Stand in front → it moves toward you  
+- Move away → it stops and waits
+
+Your rover buddy is ready to follow you on your next space adventure!

@@ -26,6 +26,12 @@ author = 'www.sunfounder.com'
 # The full version, including alpha/beta/rc tags
 release = '1.0'
 
+# -- sphinx_rtd_theme Theme options -----------------------------------------------------
+html_theme_options = {
+    'flyout_display': 'attached',
+    'version_selector': False,
+    'language_selector': False,
+}
 
 # -- General configuration ---------------------------------------------------
 
@@ -33,15 +39,10 @@ release = '1.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-'sphinx.ext.autosectionlabel',
-'sphinx_copybutton',
-'sphinx_rtd_theme',
+    'sphinx.ext.autosectionlabel',
+    'sphinx_copybutton',
+    'sphinx_rtd_theme'
 ]
-
-# -- sphinx_rtd_theme Theme options -----------------------------------------------------
-html_theme_options = {
-'flyout_display': 'attached'
-}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -74,30 +75,9 @@ html_css_files = [
     'https://ezblock.cc/readDocFile/custom.css',
 ]
 
-# pictures
-rst_epilog = """
-
-.. |app_connect| image:: /img/app/app_connect.jpg
-    :width: 20
-
-.. |app_save| image:: /img/app/app_save.jpg
-    :width: 20
-
-.. |app_run| image:: /img/app/app_run.png
-    :width: 20
-
-.. |app_edit| image:: /img/app/app_edit.jpg
-    :width: 20
-
-.. |app_set| image:: /img/app/app_set.png
-    :width: 20
-
-"""
-
-
 # open link in a new window
 
-rst_epilog += """
+rst_epilog = """
 
 .. |link_sf_facebook| raw:: html
 

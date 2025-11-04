@@ -12,238 +12,198 @@
 
     👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
 
-Lesson 2 Getting Started with the Mammoth Coding APP
-======================================================
+Lesson 2 Getting Started with the Mammoth Coding App
+===========================================================
 
-Let's dive into the world of Mammoth Coding and create your first project! 
-For an optimal experience, it is recommended to use a device with a larger screen.
-
-
-
-
-
+Let's dive into the world of Mammoth Coding and create your first project! For an optimal experience, it's recommended to use a device with a larger screen.
 
 Learning Objectives
---------------------
+----------------------
 
-* Understand the APP programming environment and basic operations.
-* Learn how to script events in sprites, use the green flag, repeat, glide, and switch costumes.
-* Create a simple animation simulating a Mars rover.
+* Set up the Mammoth Coding programming environment.
+* Understand basic programming concepts in Mammoth Coding.
+* Write and run your first program.
 
 
-Materials
------------
+Installing the APP
+----------------------
 
-* Smartphone or tablet
-* Mammoth Coding APP
+1. Search for **Mammoth Coding** on Google Play or the Apple App Store and install it.
 
+   .. image:: img/1_app_install.png
+      :width: 600
+      :align: center
 
+2. After installation, you can open it. Here's what the interface looks like on larger screens:
 
-Installing the Mammoth Coding APP
---------------------------------------
+   .. image:: img/1_app_ui_001.png
+      :width: 600
+      :align: center
 
+3. For devices with smaller screens, the interface appears as follows:
 
-First, search for Mammoth Coding on Google Play or the Apple Store and download it.
+   .. image:: img/1_app_ui_002.png
+      :width: 600
+      :align: center
 
-.. image:: img/mammoth_download.jpg
-    :align: center
+Understanding the APP
+-----------------------------------
 
+Mammoth Coding is designed to be fun, educational, and easy to learn. It provides tools for creating interactive stories, games, art, simulations, and more using block-based coding. It also includes built-in drawing and sound editors.
 
-Understanding the Mammoth Coding APP Interface
-------------------------------------------------------------
+Top Section
+^^^^^^^^^^^^^^
 
-Mammoth Coding is designed to be fun, educational, and easy to learn. 
-It provides tools for creating interactive stories, games, art, 
-simulations, and more using block-based coding. 
-It also includes its own drawing and sound editors.
+The top section of Mammoth Coding includes several essential options.
 
-Here is what the interface looks like:
+.. image:: img/1_app_ui_1.png
+   :align: center
 
-.. image:: img/2_app_ui_001.png
-    :align: center
+* **Language Settings**: The first option on the left allows you to choose different languages. Currently, English and Simplified Chinese are available.
+* **File Menu**: The second option is the **File** menu, where you can create new projects, open existing ones, and save your current project.
+* **Project Name**: The third option allows you to rename your project.
 
-For smaller screen devices, the interface looks like this:
+Navigation Bar
+^^^^^^^^^^^^^^^^^^^^^
 
-.. image:: img/2_app_ui_002.png
-    :align: center
+Just below the top section is the navigation bar, which allows you to switch between different editing pages.
 
+.. image:: img/1_app_ui_3.png
+   :align: center
 
-**Top Section**
+On smaller screens:
 
-The top section of Mammoth Coding includes several basic options.
+* The navigation bar appears at the top with options for **Code**, **Costumes**, **Sounds**, and **Stage**.
 
-.. image:: img/2_app_ui_1.png
-    :align: center
+  .. image:: img/1_app_ui_2.png
 
-* The first option from the left is the language setting, allowing you to choose different languages.
-* The second option is the file menu, where you can create new files, load local files, and save the current file.
-* The third option is for renaming your project.
+* The **Stage** page is actually the right-hand side of the interface on larger screens, separated out on smaller devices to avoid clutter.
 
+  .. image:: img/1_app_ui_4.png
+     :width: 600
 
-**Navigation**
+Code Area
+^^^^^^^^^^^^^^
 
+The **Code** page is where most of your programming activities will take place.
 
-Just below the top section is the navigation bar, 
-which allows you to switch between the Code, Costumes, 
-and Sounds editing pages.
+.. image:: img/1_app_ui_code.png
+   :width: 600
+   :align: center
 
-.. image:: img/2_app_ui_3.png
-    :align: center
+Costumes
+^^^^^^^^^^^^^^^
 
-On smaller screens, the navigation bar appears at the top.
+The **Costumes** page is used to edit sprites and backdrops, providing visual elements for your programs.
 
-.. image:: img/2_app_ui_2.png
-    :align: center
+.. image:: img/1_app_ui_custom.png
+   :width: 600
+   :align: center
 
-The options are Code, Costumes, Sounds, and Stage. 
-The Stage page is actually the right-hand side of the interface on larger screens, 
-separated out on smaller devices to avoid clutter.
+Sounds
+^^^^^^^^^^^^^
 
-.. image:: img/2_app_ui_4.png
-    :align: center
+The **Sounds** page handles audio, providing multimedia elements for your programs.
 
+.. image:: img/1_app_ui_sound.png
+   :width: 600
+   :align: center
 
-**Code**
+Creating Your First Program
+----------------------------------------
 
-.. image:: img/2_app_ui_code.png
-    :align: center
+1. Create or Open a Project
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The Code (and Stage) page is where most of your programming 
-activities will take place.
 
-**Costumes**
+* Each time you open the Mammoth Coding App, a new project is automatically created.
 
-.. image:: img/2_app_ui_custom.png
-    :align: center
+  .. image:: img/1_open_new.png
+     :width: 600
 
-The Costumes page is used to edit sprites and backdrops, 
-providing visual elements for your programs.
+* Change the default project name "My Project" to something meaningful.
 
-**Sounds**
+  .. image:: img/1_new_name.png
+     :width: 600
 
-.. image:: img/2_app_ui_sound.png
-    :align: center
+* You can also open a project that you've previously saved on your device.
 
-The Sounds page handles audio, providing multimedia elements for your programs.
+  .. image:: img/1_new_save.png
+     :width: 600
 
-First Time Using the Mammoth Coding APP
-------------------------------------------------
+2. Choose a Sprite
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Drag a block to the center area.
+* When you start a new project, a default sprite is provided. You can:
 
-.. image:: img/2_drag.png
-    :align: center
+  * Use the default sprite.
+  * Choose a new sprite from the library.
+  * Draw your own sprite.
+  * Upload a sprite from your device.
 
-Click the block and observe what happens.
+  .. image:: img/1_choose_sprite.png
 
-.. image:: img/2_click.png
-    :align: center
+* To choose a new sprite: Tap **"Choose a Sprite"** and select **"GalaxyRVR"**.
 
-You'll see the sprite in the center of the stage move a bit. 
-If you keep clicking the block, it will continue to move.
+  .. image:: img/1_choose_galaxyrvr.png
 
-.. image:: img/2_show.png
-    :align: center
+3. Write the Program
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Notice how the shapes of these blocks suggest that they can be connected, 
-similar to LEGO bricks. When you connect the blocks, 
-the sprite on the stage will execute the connected code 
-blocks in sequence (e.g., move and then rotate).
+In the left sidebar, you'll find various categorys containing different categories of blocks. You can drag blocks from these categorys into the scripting area to build your program.
 
-.. image:: img/2_click2.png
-    :align: center
+For example, to make the **GalaxyRVR** sprite move forward 10 steps and then switch to the next costume when the green flag is clicked:
 
+1. From the **Events** category, drag out the **"When green flag clicked"** block into the scripting area.
 
-.. note:: This is the basic programming process in the APP. Drag blocks from the left area, connect them together, and click them to make the stage sprite perform actions.
+     .. image:: img/1_code_flag.png
+        :width: 600
 
+2. From the **Motion** category, drag out the **"Move (10) steps"** block and snap it below the event block.
 
-**Choosing a Sprite**
+     .. image:: img/1_code_move10.png
+        :width: 600
 
+3. From the **Looks** category, drag out the **"Next costume"** block and attach it below the motion block.
 
-In the lower right corner of the interface, 
-you’ll find the "choose a sprite" button. Tap it to see four pop-up options.
+     .. image:: img/1_code_next.png
+        :width: 600
 
+4. Run the Program
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. image:: img/2_create_sp.png
-    :align: center
+There are two ways to run your program:
 
-On smaller screens, you need to navigate to see this button.
+1. Simply tap on the stack of blocks you've assembled in the scripting area. A yellow highlight will appear, indicating the script is running.
 
-.. image:: img/2_create_sp0.png
-    :align: center
+     .. image:: img/1_code_run.png
+        :width: 30%
 
+2. If your script starts with the **"When green flag clicked"** block, you can click the green flag at the top left of the **Stage** to run your program. This is recommended for projects with multiple sprites or more complex code.
 
-The four options are:
+     .. image:: img/1_code_green_flag.png
+        :width: 70%
 
-* **Upload Sprite**: Load a sprite from your device's storage.
-* **Surprise**: Select a random sprite from the asset library.
-* **Paint**: Draw a sprite.
-* **Choose a Sprite**: Open the asset library to choose a sprite.
+5. Save Your Project
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Tap "choose a sprite" to enter the asset library, which provides a variety of materials for your stage.
+After testing your code and ensuring everything works correctly, it's important to save your project.
 
-.. image:: img/2_sp_list.png
-    :align: center
+1. Click the save icon located to the right of your project's name.
 
+     .. image:: img/1_code_save.png
+        :width: 600
 
-Find and select "GalaxyRVR".
+2. A "Project saved" message will appear. The project will be saved within the Mammoth Coding App. You can access your saved projects by clicking the menu button on the far right.
 
+     .. image:: img/1_code_save_app.png
+        :width: 600
 
-.. image:: img/2_sprite_rvr.png
-    :align: center
+3. To share your code or save it to your device, click **File > Save to your equipment**, then choose an application to share with or save the project to your mobile device.
 
-**Your First Example**
+     .. image:: img/1_code_save_device.png
 
+**Congratulations!**
 
-Let's create a simple animation using the APP to make GalaxyRVR move randomly.
+You've successfully created and run your first program in Mammoth Coding. Keep experimenting and exploring to discover more features and unleash your creativity!
 
-
-
-
-.. raw:: html
-
-   <video width="600" loop autoplay muted>
-      <source src="../_static/video/sc_animate_app.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-   </video>
-
-
-
-
-**1. Start with the yellow Events category.**
-
-While we've previously executed code by clicking blocks in the central area, most of the time our code should be triggered by events. Events act like guards, monitoring actions such as sprite clicks or key presses, and tell the program what to do when these events occur.
-
-Drag out the "when green flag clicked" block.
-
-.. image:: img/2_first_flag.png
-
-The green flag acts like a starter's gun, representing the beginning of the program. This block triggers when you click the green flag next to the stage, starting all characters and code.
-
-**2. The Control category is the program's conductor.**
-
-These blocks help control the program's flow, deciding when and how often actions should occur.
-
-Drag out a "repeat 10" block and attach it below the green flag block.
-
-.. image:: img/2_first_repeat.png
-
-This means that after you click the green flag, something will happen ten times.
-
-**3. The Motion category provides instructions for the stage's actors (sprites).**
-
-Drag out a "glide 1 secs to random position" block and nest it inside the "repeat 10" block.
-
-.. image:: img/2_first_glide.png
-
-This will make your sprite glide to a random position.
-
-**4. The Looks category adds animation and visual interest to your characters.**
-
-Drag out a "next costume" block and place it inside the "repeat 10" block.
-
-.. image:: img/2_first_custom.png
-
-This makes your sprite change costumes with each action, making it look like it’s walking.
-
-Now, click the green flag next to the stage and watch your GalaxyRVR move around randomly.

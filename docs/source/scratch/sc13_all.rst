@@ -12,153 +12,150 @@
 
     👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
 
-Lesson 13 Realtime Control
+Lesson 13: Complete Mars Rover Control
 =======================================
 
-We have now explored most of the features of the GalaxyRVR. 
-To complete our journey and transform the GalaxyRVR into a fully functional robot, 
-we need to combine the three main parts we've covered.
+You've mastered all the pieces - now let's put them together! Combine everything you've learned to create your fully functional Mars Rover with live camera view, movement controls, and camera tilt.
 
+Bring together three amazing systems:
 
-    * :ref:`camera_system` : This part includes the camera and LED control features.
+- :ref:`camera_system`: See through your rover's eyes with live video
+- :ref:`rgb_move`: Drive around with colorful signal lights  
+- :ref:`tilt_system`: Look up and down with camera controls
 
-    * :ref:`rgb_move` : This section includes movement and lighting effects.
-
-    * :ref:`tilt_system` : This part involves adjusting the direction of the camera gimbal.
-
-Put it all together and you can click the sprites to turn the camera and LED on or off, and use the arrow keys to move the GalaxyRVR.
+The result? Complete control of your GalaxyRVR! Click buttons for camera controls and use arrow keys to drive.
 
 .. image:: img/13_camera_go_all2.png
 
 
-**Camera System**
-------------------------------------
-
-
-For this part, repeat the steps from :ref:`camera_system`.
-
-1. create four new sprites to control the camera and its LED. Adjust their sizes to make them look harmonious.
-
-.. image:: img/11_camera_4.png
-.. :align: center
-
-2. Program each sprite: clicking ball 1 will turn off the camera.
-
-.. image:: img/11_camera_1sp.png
-.. :align: center
-
-3. Clicking ball 2 will turn on the camera and set the image orientation.
-
-.. image:: img/11_camera_2sp.png
-.. :align: center
-
-4. Clicking ballon 3 will turn on the LED.
-
-.. image:: img/11_camera_3sp.png
-.. :align: center
-
-5. Clicking ballon 4 will turn off the LED.
-
-.. image:: img/11_camera_4sp.png
-.. :align: center
-
-6. To save space on the stage, stack each set of controls.
-
-.. image:: img/11_camera_fold.png
-.. :align: center
-
-7. Add a ``go to back layer`` block for each sprite. When clicked, the sprite will move to the back layer, revealing the next sprite, creating a toggle effect.
-
-.. image:: img/11_camera_layer.png
-.. :align: center
-
-
-
-
-**Move & RGB System**
+Camera System
 ----------------------------------
 
+Repeat the camera setup from your previous lesson: :ref:`camera_system`.
 
+1. Create four control sprites and arrange them neatly.
 
-Let's enhance the movement functionalities. We have already coded these in the :ref:`rgb_move` section.
+   .. image:: img/11_camera_4.png
 
-We recommend placing these code blocks in the Backdrops. This way, modifying the sprite's code won't affect this functionality.
+2. Program each button's function:
 
-.. image:: img/13.ccc_code_in_stage.png
+   - Ball 1: Camera OFF
+   
+   .. image:: img/11_camera_1sp.png
+   
+   - Ball 2: Camera ON with correct orientation
+   
+   .. image:: img/11_camera_2sp.png
+   
+   - Balloon 1: LED light ON
+   
+   .. image:: img/11_camera_3sp.png
+   
+   - Balloon 2: LED light OFF
+   
+   .. image:: img/11_camera_4sp.png
 
-1. Let GalaxyRVR turn on the green light when moving forward.
+3. Stack the controls to save space - they'll unfold when you need them!
 
-.. image:: img/13.ccc_light_forward.png
+   .. image:: img/11_camera_fold.png
 
+4. Add ``go to back layer`` to create a cool toggle effect between buttons.
 
-2. Let GalaxyRVR turn on the red light when moving backward.
+   .. image:: img/11_camera_layer.png
 
-.. image:: img/13.ccc_light_left_right.png
+Movement & Lighting System
+----------------------------------
 
-3. Let GalaxyRVR turn on the yellow light when turning left or right.
+Let's add colorful lights to your rover's movements!  We have already coded these in the :ref:`rgb_move` section.
 
-.. image:: img/13.ccc_light_backfwd.png
+We recommend placing this code in the Backdrops section - this keeps it separate from your sprite code and makes everything more organized.
 
-4. Let GalaxyRVR turn on the breathing light when not moving.
+   .. image:: img/13.ccc_code_in_stage.png
 
-.. image:: img/13.ccc_light_breath.png
+1. Make your rover glow GREEN when moving forward.
 
-Finally, your code should be as follows. 
-Please note that these codes should be written in Backdrops.
+   .. image:: img/13.ccc_light_forward.png
 
-.. image:: img/11_camera_backdrops.png
+2. Make your rover glow RED when moving backward.
 
+   .. image:: img/13.ccc_light_backfwd.png
 
+3. Make your rover glow YELLOW when turning left or right.
 
-**Tilt System**
+   .. image:: img/13.ccc_light_left_right.png
+
+4. Create a breathing blue light effect when your rover is stopped.
+
+   .. image:: img/13.ccc_light_breath.png
+
+Your complete backdrop code should look like this:
+
+   .. image:: img/11_camera_backdrops.png
+
+Camera Tilt Control
 ------------------------
 
-
-This part is the same as the :ref:`tilt_system`. Simply repeat the steps.
-
-1. Add an Arrow sprite. We will set the gimbal direction based on its orientation.
-
-.. image:: img/10_servo_arrow.png
+Let's add camera controls! This part is the same as the :ref:`tilt_system`. Simply repeat the steps.
 
 
-2. A ``when this sprite clicked`` block is exactly what we need.
+1. Add an **Arrow** sprite to control your camera's tilt.
 
-.. image:: img/6_animate_when_touch.png
-    :width: 200
+   .. image:: img/10_servo_arrow.png
 
+2. Start with a ``when this sprite clicked`` block.
 
-3. Let the program repeat until we release it, meaning we no longer touch the sprite.
+   .. image:: img/6_animate_when_touch.png
+       :width: 200
 
-.. image:: img/6_animate_repeat_touching.png
-    :width: 400
+3. Create a loop that runs while you're touching the arrow.
 
-4. Drag a ``point towards touch_position`` block to make the sprite face the touch position.
+   .. image:: img/6_animate_repeat_touching.png
+       :width: 400
 
-.. image:: img/10_servo_arrow_point_toward.png
-    :width: 400
+4. Make the arrow point toward your finger as you drag.
 
-5. Drag a ``set servo angle to 90 degrees`` block and embed a ``direction`` block to align the gimbal angle with the arrow sprite's orientation. This way, when we change the arrow sprite's direction (i.e., touch the stage area), we can change the gimbal angle.
+   .. image:: img/10_servo_arrow_point_toward.png
+       :width: 400
 
-.. image:: img/10_servo_arrow_angle_direction.png
-    :width: 800
+5. Connect the arrow's direction to the camera angle - rotate the arrow to move the camera!
 
-6. Add a limit check to ensure the arrow sprite's orientation does not exceed 135 degrees.
+   .. image:: img/10_servo_arrow_angle_direction.png
+       :width: 800
 
-.. image:: img/10_servo_arrow_135.png
-    :width: 400
+6. Set limits to keep the camera between 0-135 degrees.
 
-7. Similarly, ensure its orientation does not go below 0 degrees.
+   .. image:: img/10_servo_arrow_135.png
+       :width: 400
 
-.. image:: img/10_servo_arrow_0.png
-    :width: 400
+   .. image:: img/10_servo_arrow_0.png
+       :width: 400
 
-Touch the sprite, and it will change direction as you drag, altering the gimbal angle.
+Touch and drag the arrow to aim your rover's camera! Make the arrow bigger if it's hard to control.
 
-If you find it easy to slide your finger off the arrow sprite, you can increase the sprite's size accordingly.
+Complete Control of Your GalaxyRVR
+------------------------------------
 
+Now you have full control of your Mars Rover! Here's how to operate your complete GalaxyRVR:
 
+.. image:: img/13_camera_go_all2.png
 
+**Control Your Rover:**
 
+- Use the arrow keys to drive forward, backward, and turn
+- Click the Ball sprites to turn the live camera video on and off
+- Click the Balloon sprites to control the camera LED light on and off
+- Drag the arrow sprite to tilt the camera up and down
+
+**Test All Features Together:**
+
+- Drive around while watching the live camera feed from your rover
+- Notice the colored lights that signal each movement
+- Practice tilting the camera to look at objects from different angles
+- Try exploring in both bright and dark conditions using the LED light
+
+Congratulations! You have successfully combined all the systems to create a fully functional Mars Rover. You've learned how to program movement, lighting, camera controls, and tilt mechanisms - all the skills needed to operate a real exploration robot.
+
+Your Mars mission is now ready to begin. Happy exploring!
 
 
 

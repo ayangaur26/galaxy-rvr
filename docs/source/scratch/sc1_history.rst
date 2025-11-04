@@ -42,9 +42,9 @@ Before we dive into Mars rovers, let's first acquaint ourselves with Mars itself
 the surface of Mars is marked with craters, mountains, valleys, and dust storms, painting a picture of a landscape 
 that is both fascinating and challenging.
 
-    .. image:: ../img/mars_surface.jpg
+    .. image:: img/mars_surface.jpg
         :width: 600
-    .. image:: ../img/mars_surface.png
+    .. image:: img/mars_surface.png
         :width: 600
 
 Can you imagine what it would be like to navigate through such a rugged terrain? 
@@ -90,7 +90,7 @@ After watching the documentary, let's summarize the different Mars rovers that h
     on a planet other than Earth, Sojourner marked a significant milestone in Martian exploration. 
     Although it was operational on Mars for only 92 Martian days, or sols, it set the groundwork for future exploratory rovers.
 
-    .. image:: ../img/mars_sojourner.jpg
+    .. image:: img/mars_sojourner.jpg
 
 * **Spirit** (2004–2010) and **Opportunity** (2004–2018)
 
@@ -100,7 +100,7 @@ After watching the documentary, let's summarize the different Mars rovers that h
     On the other hand, **Opportunity**, or MER-B, had a remarkably long run from 2004 to 2018. 
     Together, they greatly expanded our understanding of the Martian surface and geological history.
 
-    .. image:: ../img/mars_opportunity.jpg
+    .. image:: img/mars_opportunity.jpg
 
 * **Curiosity** (2012–present):
 
@@ -108,14 +108,14 @@ After watching the documentary, let's summarize the different Mars rovers that h
     Mars Science Laboratory (MSL) mission. Since its arrival in 2012, **Curiosity** has made numerous significant discoveries, 
     including evidence of past liquid water on Mars.
 
-    .. image:: ../img/mars_curiosity.jpg
+    .. image:: img/mars_curiosity.jpg
 
 * Perseverance (2021–present):
 
     **Perseverance**, also known as Percy, is the most recent rover to arrive on Mars. It's designed to explore the Jezero crater 
     as part of NASA's Mars 2020 mission. Along with its scientific instruments, **Perseverance** also carries Ingenuity, a small experimental Mars helicopter, marking another first in Martian exploration.
 
-    .. image:: ../img/mars_perseverance.jpg
+    .. image:: img/mars_perseverance.jpg
 
 Now, let's have a discussion. Reflect on the evolution of these rovers.
 
@@ -127,11 +127,11 @@ Now, let's have a discussion. Reflect on the evolution of these rovers.
 
 **Step 4: Art Activity: Draw Your Own Mars Rover**
 
-.. image:: ../img/sojourner-first.jpg
-.. image:: ../img/spirit-opportunity.jpg
+.. image:: img/sojourner-first.jpg
+.. image:: img/spirit-opportunity.jpg
     :width: 500
-.. image:: ../img/curiosity.png
-.. image:: ../img/perseverance_rover.png
+.. image:: img/curiosity.png
+.. image:: img/perseverance_rover.png
 
 For our next activity, let's put our knowledge and creativity to work by designing our very own Mars rover. Consider the key characteristics of the rovers we've studied so far, but also think about the unique attributes you would want to incorporate in your design.
 

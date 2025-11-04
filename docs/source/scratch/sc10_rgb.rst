@@ -13,16 +13,19 @@
     👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
 
 
-Lesson 10 Lighting the Way with RGB LED Strips
+Lesson 10: Lighting the Way with RGB LED Strips
 ===============================================================
 
-In our journey so far, we've transformed our Mars Rover into a smart explorer, capable of skillfully maneuvering around obstacles. It's become quite adept at navigating the Mars-like terrains we've set up for it.
+Our Mars Rover has become a skilled explorer, but now it's time to add some colorful personality! In this lesson, we'll transform our rover with RGB LED strips that can glow in any color imaginable.
 
-But, what if we could add a bit of flair to its practicality? Let's give our Rover the ability to express itself through a spectacle of colors and light. We're talking about incorporating RGB LED strips - a cool feature that would allow our Rover to illuminate its path, even in the darkest conditions.
+Imagine your GalaxyRVR lighting up its path like a spaceship from a sci-fi movie:
 
-Picture this - the Rover leaves a trail of color-coded signals, making it easier for us to understand its moves. A green glow when it's on the go, a stern red when it halts, or a flashy yellow during those swift turns. It could even light up in an array of colors just for the sheer fun of it!
+- Green glow when moving forward
+- Red light when stopping  
+- Yellow flashes when turning
+- Beautiful color shows just for fun!
 
-Our goal in this lesson is to understand the principles of RGB LED strips, learn to control their color and brightness, and then synchronize this with the Rover's movements. By the end, our Mars Rover will be more than a machine. It'll be a luminous, color-changing entity, leading the way in the vast Martian landscape!
+We'll learn how to program these amazing lights and sync them with your rover's movements. Get ready to create your own light-up Mars explorer!
 
 .. raw:: html
 
@@ -31,109 +34,103 @@ Our goal in this lesson is to understand the principles of RGB LED strips, learn
         Your browser does not support the video tag.
     </video>
 
-Objective
--------------
+Learning Objectives
+-------------------
 
-* Introduce the working principles and programming control methods of RGB LED strips.
-* Utilize RGB LED strips with Mammoth Coding to achieve color control and simple lighting effects.
-* Create a Mammoth Coding project to simulate light changes in a Mars environment or signal lights for Mars exploration missions.
-
-Materials Needed
--------------------------
-
-* RGB LED strip and controller
-* Mammoth Coding APP
-* Computer or tablet
+* Discover how RGB LED strips work and how to program them
+* Learn to control colors and create lighting effects using Mammoth Coding
+* Design light signals and colors for your Mars exploration missions
 
 Explore the Magic of Light with RGB LED Strips
 -------------------------------------------------------------
 
-Do you remember the last time you saw a rainbow? How it made the sky colorful with seven vibrant hues? How would you like to create your own rainbow, right here in our little Martian rover? Let's dive into the magic of light with RGB LED strips!
+Have you ever wanted to create your own rainbow? Now you can! With RGB LED strips, you can make your Mars rover glow with any color you can imagine. Let's discover the magic of colorful lights!
 
-.. image:: ../img/4_rgb_strip.jpg
+.. image:: img/4_rgb_strip.jpg
 
-You might notice that our RGB LED Strip has four pins labeled as follows:
+Meet the four important pins on your LED strip:
 
-* **+5V**: This is the common "positive" end or the "anode" of the three tiny light bulbs (LEDs) inside our strip. It needs to connect to DC 5V, a kind of electric juice that powers our tiny bulbs!
-* **B**: This is the "negative" end or the "cathode" of the blue LED.
-* **R**: This is the "cathode" of the red LED.
-* **G**: This is the "cathode" of the green LED.
+* **+5V** - The power pin that gives energy to all the lights (needs 5V electricity)
+* **B** - Controls the blue lights
+* **R** - Controls the red lights  
+* **G** - Controls the green lights
 
-.. image:: ../img/rgb_5050.jpg
+.. image:: img/rgb_5050.jpg
 
-Do you remember the three primary colors - Red, Blue, and Green - that we learned in our art class? Just like an artist mixes these colors on his palette to create new shades, our strip contains 4 "5050" LEDs that can mix these primary colors to create virtually any color! Each "5050" LED is like a tiny art studio that houses these three colored bulbs.
+Remember learning about primary colors in art class? Just like mixing paint, each LED can blend red, blue, and green light to create amazing colors! Each "5050" LED is like a tiny color factory containing all three colors.
 
-.. image:: ../img/rgb_5050_sche.png
+.. image:: img/rgb_5050_sche.png
 
-These tiny art studios are then connected in a smart way on a flexible circuit board - kind of like a mini electric highway! The "positive" ends of all LEDs (anodes) are connected together, while the "negative" ends (cathodes) are connected to their corresponding color lanes (G to G, R to R, B to B).
+All these color factories are connected together on a flexible circuit - like a colorful electric highway! The power pins connect together, while the color pins each have their own special path.
 
-.. image:: ../img/rgb_strip_sche.png
+.. image:: img/rgb_strip_sche.png
 
-And the coolest part? With our command, all the LEDs on this strip can change their colors at once! It's like having our own light orchestra at the tip of our fingers!
+The most exciting part? You can program ALL the LEDs to change colors at the same time! Imagine creating your own light show with just a few code blocks. Get ready to light up your Mars rover adventure!
 
 Light Up the Show
 ------------------------------
 
-1. Let's try lighting up the GalaxyRVR with colors! Drag out a display color block.
+#. First, :ref:`app_connect`.
 
-.. image:: img/9_rgb_block.png
+#. Now, let's make your GalaxyRVR glow! Drag out a "display color" block to start.
 
-2. Choose your favorite color.
+   .. image:: img/9_rgb_block.png
 
-.. image:: img/9_rgb_color.png
+#. Choose any color you like from the color menu.
 
-3. Click it, and you'll see the GalaxyRVR light up in the corresponding color.
+   .. image:: img/9_rgb_color.png
 
-**Using the Stage to Control GalaxyRVR**
+#. Click the block and watch your GalaxyRVR light up with your chosen color!
 
-Next, let's create an interactive project to get familiar with the lighting functions of GalaxyRVR. We'll click on the stage sprite to change the color of the GalaxyRVR.
+**Create a Color Controller**
 
-1. Delete the existing sprite.
+Now let's build an interactive color controller! We'll create colorful buttons on the stage that change your GalaxyRVR's lights when you tap them.
 
-.. image:: img/6_animate_delete.png
+1. First, delete any existing sprites to start fresh.
 
-2. Choose a Ball sprite. The reason for choosing this sprite is that it has many costumes, each corresponding to a different color.
+   .. image:: img/6_animate_delete.png
 
-.. image:: img/9_animate_rgb_ball.png
+2. Add a Ball sprite from the library. This sprite is perfect because it comes with multiple color costumes.
 
-3. Drag a when this sprite clicked block, which triggers an action when the stage sprite is clicked.
+   .. image:: img/9_animate_rgb_ball.png
 
-.. image:: img/9_animate_rgb_when.png
+3. Add a "when this sprite clicked" block - this will make things happen when you tap the ball.
 
-4. Drag a display block to make the GalaxyRVR light up.
+   .. image:: img/9_animate_rgb_when.png
 
-.. image:: img/9_animate_rgb_display.png
+4. Connect a "display color" block to light up your GalaxyRVR.
 
-5. If you're using a small screen device, click the eye button beside it to ensure the stage preview window is on the same interface.
+   .. image:: img/9_animate_rgb_display.png
 
-.. image:: img/9_animate_rgb_eye.png
+5. On small screens, make sure you can see the stage by clicking the eye button.
 
-6. Click the color on the display block. At the bottom of the pop-up window, there is a color picker button. Click it.
+   .. image:: img/9_animate_rgb_eye.png
 
-.. image:: img/9_animate_rgb_pick.png
+6. Click the color box in the display block, then click the color picker button at the bottom.
 
-7. Hold down on the stage area. A magnifying glass will appear at your fingertip for color picking. 
-Release it on the Ball sprite to pick its color for the display block.
+   .. image:: img/9_animate_rgb_pick.png
 
-.. image:: img/9_animate_rgb_pick_color_n.png
+7. Press and hold on the stage area - a magnifying glass will appear! Release it over the ball sprite to copy its color.
 
-8. Long press the Ball sprite on the stage to duplicate it.
+   .. image:: img/9_animate_rgb_pick_color_n.png
 
-.. image:: img/9_animate_rgb_duplicate.png
+8. Make more color buttons by long-pressing the ball sprite to duplicate it.
 
-9. In the costumes interface, switch to the next color.
+   .. image:: img/9_animate_rgb_duplicate.png
 
-.. image:: img/9_animate_rgb_change_costume.png
+9. Change each duplicate to a different color by switching its costume.
 
-10. Return to the Code interface and pick the color to match the current sprite.
+   .. image:: img/9_animate_rgb_change_costume.png
 
-.. image:: img/9_animate_rgb_pick_blue.png
+10. For each new color, use the color picker to match the display block to the sprite's current color.
 
-11. Repeat steps 8-10 until all five colors are set.
+   .. image:: img/9_animate_rgb_pick_blue.png
 
-.. image:: img/9_animate_rgb_ball5.png
+11. Repeat until you have five different color buttons!
 
-Now, you can click on the Ball sprite in the stage area to make the GalaxyRVR light up in different colors.
+   .. image:: img/9_animate_rgb_ball5.png
+
+Now tap any colored ball on the stage and watch your GalaxyRVR glow with that color! Create your own light show with just a tap.
 
 .. _rgb_move:
 
@@ -142,113 +139,116 @@ GalaxyRVR Signal Lights in Action
 
 **Directional Indicator Lights**
 
-Now that we know how to make the GalaxyRVR emit colors, let's combine this function with :ref:`rvr_move`.
+Let's combine light colors with movement to create signal lights for your GalaxyRVR! Just like a car has turn signals, your rover will light up in different colors when it moves.
 
-1. Create a new project.
+#. First, :ref:`app_connect`.
 
-2. First, set up the key event blocks and move blocks for the four directions.
+#. Now, set up direction keys with movement blocks for all four directions.
 
-.. image:: img/9_rgb_move.png
+   .. image:: img/9_rgb_move.png
 
-3. Add color displays to each event: green for forward.
+#. Add color displays to each direction:
+   
+   - Green light for moving forward
+   
+   .. image:: img/9_rgb_green.png
+   
+   - Yellow lights for turning left and right
+   
+   .. image:: img/9_rgb_yellow.png
+   
+   - Red light for moving backward
+   
+   .. image:: img/9_rgb_red.png
 
-.. image:: img/9_rgb_green.png
+Now when you press the direction keys, your GalaxyRVR will move and glow with the matching color!
 
-4. Yellow for turning left and right.
+**Breathing Light Effect**
 
-.. image:: img/9_rgb_yellow.png
+Let's create a cool breathing light that slowly brightens and dims when your rover is resting, just like it's breathing!
 
-5. Red for moving backward.
+1. Create a new broadcast message called "stop" to signal when the rover isn't moving.
 
-.. image:: img/9_rgb_red.png
+   .. image:: img/9_rgb_new_message.png
 
-Now, when you click the direction keys in the stage area, you'll see the GalaxyRVR move and light up in the corresponding color.
+   .. note:: Broadcast messages help organize your code by triggering specific actions at the right time, making your programs cleaner and easier to understand.
 
-**Breathing Light**
+2. Add this broadcast after each movement command.
 
-A breathing light is an effect where the light gradually brightens and dims, similar to the rhythm of breathing. Next, let's add a breathing light effect when the GalaxyRVR is stationary.
+   .. image:: img/9_rgb_new_boardcast.png
 
-1. Create a new broadcast message named stop. This will tell your program that the GalaxyRVR is in a stopped state.
+3. Create a "when I receive [stop]" block to start the breathing light.
 
-.. image:: img/9_rgb_new_message.png
+   .. image:: img/9_rgb_when_receive.png
 
-.. note:: If your sprite has many actions to perform but needs to start certain actions at specific times or under certain conditions, the broadcast block can help you manage this. This way, your sprite can execute different actions in the desired order without cluttering the code, making it clearer and easier to understand.
+4. Set brightness to 0% to start from completely dark.
 
-2. Add this broadcast after each directional key event.
+   .. image:: img/9_rgb_set_bright.png
 
-.. image:: img/9_rgb_new_boardcast.png
+5. Use a repeat loop to gradually increase blue light brightness by 10% every 0.2 seconds.
 
-3. Drag out a when I receive [stop] block.
+   .. image:: img/9_rgb_increase.png
 
-.. image:: img/9_rgb_when_receive.png
+6. Then gradually decrease the brightness to complete one breathing cycle.
 
-4. Set the brightness to 0%, starting our breathing light from 0 brightness.
+   .. image:: img/9_rgb_decrease.png
 
-.. image:: img/9_rgb_set_bright.png
+7. Broadcast "stop" again to keep the breathing effect continuous.
 
-5. Use a repeat 10 block to create a gradual change in brightness. Here, we use the blue light, increasing the brightness by 10% every 0.2 seconds.
+   .. image:: img/9_rgb_stopagain.png
 
-.. image:: img/9_rgb_increase.png
+8. Add "stop other scripts" at the end of each key event to prevent color conflicts.
 
-6. Follow it with a block to decrease the brightness by 10% every 0.2 seconds, completing one breathing cycle.
+   .. image:: img/9_rgb_stop.png
 
-.. image:: img/9_rgb_decrease.png
+9. Reset the light brightness in each direction key event.
 
-7. Broadcast stop again at the end to create a continuous breathing effect.
+   .. image:: img/9_rgb_set_bright_each.png
 
-.. image:: img/9_rgb_stopagain.png
-
-8. If you control the GalaxyRVR directly at this point, you may find the colors and brightness are out of sync. Therefore, add a stop other scripts in sprite block at the end of each key event.
-
-.. image:: img/9_rgb_stop.png
-
-9. Since the brightness changes in the stop event, reset the light brightness in each key event.
-
-.. image:: img/9_rgb_set_bright_each.png
-
-Now, when you press the direction keys on the stage, the GalaxyRVR will move and light up in the corresponding color. When you stop controlling it, it will remain stationary and slowly breathe light.
+Now your GalaxyRVR will light up with colored signals when moving, and gently pulse with a breathing blue light when resting!
 
 RGB Module Related Blocks
 -------------------------------
 
-.. image:: img/block/rgb_display.png
 
-Illuminate the RGB strip under your GalaxyRVR with your chosen color. You can:
+* Light up your GalaxyRVR with any color you choose.
 
-    * Click on the color patch to select your desired color.
+  - Click the color patch to pick your favorite color
 
-.. image:: img/block/rgb_display_1s.png
+  .. image:: img/block/rgb_display.png
 
-Illuminate the RGB strip under your GalaxyRVR with your chosen color for 1 second. You can:
 
-    * Click on the color patch to select your desired color.
-    * Modify the number to change the duration of the light display
+* Light up your GalaxyRVR for a specific amount of time.
 
-.. image:: img/block/rgb_display_RGB.png
+  - Choose any color
+  - Set how long the light stays on
+  
+  .. image:: img/block/rgb_display_1s.png
 
-Illuminate the RGB strip under your GalaxyRVR with a color of your choice, using RGB values to alter the color (by adjusting the proportion of red, green, and blue primary lights, you can produce any color), which is very useful for projects involving color gradients. You can:
+* Create custom colors by mixing red, green, and blue light - perfect for color fading projects!
 
-    * Modify the R value to adjust the brightness of the red light, within a range of 0-255.
-    * Modify the G value to adjust the brightness of the green light, within a range of 0-255.
-    * Modify the B value to adjust the brightness of the blue light, within a range of 0-255.
+  - R: Red brightness (0-255)
+  - G: Green brightness (0-255) 
+  - B: Blue brightness (0-255)
+  
+  .. image:: img/block/rgb_display_RGB.png
 
-.. image:: img/block/rgb_display_RGB_1s.png
+* Show custom RGB colors for a set time.
 
-Illuminate the RGB strip under your GalaxyRVR with a color of your choice for 1 second using RGB values. You can:
+  - Adjust red, green, and blue values (0-255)
+  - Set the display duration
+  
+  .. image:: img/block/rgb_display_RGB_1s.png
 
-    * Modify the R value to adjust the brightness of the red light, within a range of 0-255.
-    * Modify the G value to adjust the brightness of the green light, within a range of 0-255.
-    * Modify the B value to adjust the brightness of the blue light, within a range of 0-255.
-    * Modify the duration to change how long the light displays
+* Set how bright the lights should be (0-100%).
 
-.. image:: img/block/rgb_set_brightness.png
+  .. image:: img/block/rgb_set_brightness.png
 
-This block is used to set the brightness of the lights, with a range from 0 to 100.
+* Make the lights brighter or dimmer. Use negative numbers to decrease brightness.
 
-.. image:: img/block/rgb_increase_brightness.png
+  .. image:: img/block/rgb_increase_brightness.png
 
-This block increases (or decreases) the brightness of the lights. The value can be negative.
 
-.. image:: img/block/rgb_turn_on.png
+* Turn the RGB lights on or off.
 
-Turn off (or on) the RGB strip under your GalaxyRVR.
+  .. image:: img/block/rgb_turn_on.png

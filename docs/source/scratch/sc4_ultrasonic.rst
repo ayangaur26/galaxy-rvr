@@ -12,20 +12,14 @@
 
     👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
 
+Lesson 4: Ultrasonic Module
+=============================
 
+Give your GalaxyRVR the power to "see" with sound! 
 
-Lesson 4 Ultrasonic
-===========================
+Discover how ultrasonic sensors work like a bat's echolocation - sending out sound waves and listening for echoes to detect obstacles and measure distances.
 
-
-In our last adventure, we equipped our Mars Rover with "eyes" on its sides, creating a basic obstacle avoidance system. Yet, there's a blind spot right in front – a challenge we're ready to overcome!
-
-Today, in this lesson, we're going to give our Rover a new sense of "sight." We'll install an ultrasonic sensor module, acting as a pair of central eyes, which will help our rover detect obstacles directly ahead.
-
-We will delve into the fascinating mechanics of ultrasonic waves and explore how they enhance our Rover's ability to navigate complex terrains. With this addition, our Mars Rover will be more perceptive and agile, ready to embark on more ambitious exploratory missions.
-
-Join us as we take a step further into this exciting STEAM journey, making our Mars Rover even more adept at exploring the uncharted territories!
-
+Make your Mars Rover smarter and safer as it explores!
 
 .. raw:: html
 
@@ -34,152 +28,126 @@ Join us as we take a step further into this exciting STEAM journey, making our M
       Your browser does not support the video tag.
    </video>
 
-
 Learning Objectives
--------------------------
+-------------------
 
-* Understand the principle of ultrasonic distance measurement.
-* Learn how to use Mammoth Coding APP and ultrasonic module for distance measurement.
-* Practice applying the ultrasonic module for obstacle avoidance on the GalaxyRVR.
-
-
-Materials
------------
-
-* Smartphone or tablet
-* Mammoth Coding APP
-* GalaxyRVR
-
+* Discover how ultrasonic sensors use sound waves to measure distance
+* Learn to read distance measurements using the Mammoth Coding APP
+* Program your GalaxyRVR to avoid obstacles using the ultrasonic sensor
 
 Exploring the Ultrasonic Module
 --------------------------------------------
 
-Let's get to know the HC-SR04, a powerful ultrasonic distance sensor. This tiny device can accurately measure distances from 2 cm up to 400 cm, all without touching a thing! Amazing, right? It's like having a superhero power! It can "see" distances just by using sound waves, like how a bat navigates at night.
+Meet the HC-SR04 ultrasonic sensor - your rover's new "superpower" for seeing distances without touching anything! Just like bats use sound to navigate, this clever device can detect objects from 2cm to 400cm away.
 
-It uses four superpowers, or rather, four pins to do its magic:
-
-.. image:: ../img/ultrasonic_pic.png
+.. image:: img/ultrasonic_pic.png
     :width: 400
     :align: center
 
-* **TRIG (Trigger Pulse Input)** - It's the start button for our superhero. It tells our superhero, "Hey, it's time to send out a super sonic wave!"
-* **ECHO (Echo Pulse Output)** - This is how our superhero listens to the echo of the sound wave it sent out.
-* **VCC** - Even superheroes need some energy. We connect it to a 5V power supply.
-* **GND** - It's the ground connection. Just like how superheroes need to stay connected to reality!
+**Meet the Four Important Pins:**
 
-Imagine our superhero, the HC-SR04 Ultrasonic Sensor, playing a game of echo in the mountains.
+* **TRIG** - The "start button" that tells the sensor to send out sound waves
+* **ECHO** - Listens for the returning echo from objects
+* **VCC** - Power connection (needs 5V electricity)
+* **GND** - Ground connection (completes the circuit)
 
-.. image:: ../img/ultrasonic_prin.jpg
+**How It Works - The Echo Game:**
+
+.. image:: img/ultrasonic_prin.jpg
     :width: 800
 
-* First, our superhero's brain, the MCU, says, "Ready, Set, Go!" by sending out a high-level signal for at least 10 microseconds to our superhero. This is like when we gather our energy before we yell into a valley.
-* On hearing "Go!", our superhero shouts out loud 8 times very quickly. This super-sonic shout is sent out at a speed of 40 kHz. The superhero also starts a stopwatch and keeps an ear out for any returning shouts.
-* If there is an obstacle in front, the shout will hit it and echo back. On hearing the echo, our superhero stops the stopwatch and notes the time. It also sends out a high-level signal to let the MCU know it heard an echo.
-* Lastly, to find out how far away the obstacle is, our superhero uses a simple formula. It takes the time it recorded on the stopwatch, divides it by 2, and multiplies it by the speed of sound (340m/s). The result is the distance to the obstacle!
+1. **START** - The sensor sends out 8 quick sound waves (too high for us to hear!)
+2. **LISTEN** - It starts timing and waits for the echo to bounce back
+3. **CALCULATE** - Using the echo time, it calculates: Distance = (Time × Speed of Sound) ÷ 2
 
-That's how our superhero sensor can figure out if there's an obstacle in its path and how far away it is. Amazing, isn't it? Next, we'll learn how we can use this superhero power in our Mars Rover!
+Think of it like shouting in a canyon and counting how long it takes to hear your echo. The longer the wait, the farther the wall!
 
+Now let's give your Mars Rover this amazing superpower!
 
-
-
-Ultrasonic Distance Module Detection Values
+Testing the Ultrasonic Sensor
 ----------------------------------------------------------
 
-1. Let's see what the detection values of the ultrasonic distance module are. First, :ref:`app_connect` .
+#. First, :ref:`app_connect`.
 
-2. Find the "distance in cm" block under the GalaxyRVR category. Check its checkbox.
+2. Find the "distance in cm" block in the GalaxyRVR category and check its box.
 
-.. image:: img/6_ultrasonic_value.png
+   .. image:: img/6_ultrasonic_value.png
 
-3. This will display its value on the stage.
+3. The sensor's reading will now show live on the stage.
 
-.. image:: img/6_ultrasonic_value2.png
+   .. image:: img/6_ultrasonic_value2.png
 
-4. Move your hand back and forth in front of the ultrasonic module, and you will see the distance between your hand and the module displayed on the stage. The unit is cm.
+4. Wave your hand in front of the ultrasonic sensor and watch the number change - it's measuring the distance in centimeters!
 
-
-
-Responding to the Ultrasonic Distance Module
+Creating an Obstacle-Avoiding Rover
 --------------------------------------------------------------------
 
-We can use the infrared obstacle avoidance module to make the GalaxyRVR automatically avoid obstacles ahead.
+Let's program your GalaxyRVR to automatically avoid obstacles using the ultrasonic sensor.
 
-1. Drag in a green flag block.
+1. Start with the green flag block.
 
-.. image:: img/6_ultrasonic_flag.png
+   .. image:: img/6_ultrasonic_flag.png
 
-2. Set the speed. Here we set the speed to 30%, so it's not too fast, making it easier to debug.
+2. Set a comfortable speed (we recommend 30%) for testing.
 
-.. image:: img/6_ultrasonic_speed.png
+   .. image:: img/6_ultrasonic_speed.png
 
-3. Place a forward block to keep it moving when there are no obstacles.
+3. Add a "move forward" block so the rover keeps moving when the path is clear.
 
-.. image:: img/6_ultrasonic_forward.png
+   .. image:: img/6_ultrasonic_forward.png
 
-4. Find the ``when distance < 15 cm`` block.
+4. Use the ``when distance < 15 cm`` block to detect nearby obstacles.
 
-.. image:: img/6_ultrasonic_when.png
+   .. image:: img/6_ultrasonic_when.png
 
-5. When an obstacle is detected, the GalaxyRVR stops moving and reverses.
+5. When something gets too close, make the rover stop and back up.
 
-.. image:: img/6_ultrasonic_backward.png
+   .. image:: img/6_ultrasonic_backward.png
 
-6. Make a slight turn (either left or right).
+6. Then have it turn slightly (left or right - your choice!).
 
-.. image:: img/6_ultrasonic_turn.png
+   .. image:: img/6_ultrasonic_turn.png
 
-7. After completing the turn, move forward again.
+7. Finally, tell it to move forward again on its new path.
 
-.. image:: img/6_ultrasonic_forward_again.png
+   .. image:: img/6_ultrasonic_forward_again.png
 
-Now, place the GalaxyRVR on the ground, and it will continue moving forward until it encounters an obstacle directly ahead, at which point it will change direction.
+Now place your GalaxyRVR on the floor and watch it go! It will cruise forward until it detects an obstacle, then smartly change direction and continue exploring.
 
-
-
-
-Blocks Related to the Ultrasonic Module
+Ultrasonic Sensor Blocks
 -------------------------------------------------
 
-.. image:: img/block/ultra_when.png
+* **Event Trigger Block**
+  
+  Starts code when an object is detected within a set distance.
+  
+  - Change the comparison symbol (< or >)
+  - Adjust the distance threshold (in cm)
 
-This is an event block that is triggered when the ultrasonic sensor detects an obstacle closer than 15cm. You can:
+  .. image:: img/block/ultra_when.png
 
-    * Change ``<`` to ``>`` in the dropdown menu
-    * Modify the number to adjust the threshold condition
+* **Wait Until Block**
+  
+  Pauses your program until the sensor detects an object at the specified distance.
+  
+  - Choose < or > for distance comparison
+  - Set your desired distance value
 
-.. image:: img/block/ultra_wait_until.png
+  .. image:: img/block/ultra_wait_until.png
 
-This block pauses the program until the ultrasonic sensor detects an obstacle further than 15cm, then continues the program. You can:
+* **Condition Check Block**
+  
+  Returns TRUE or FALSE based on distance detection. Perfect for use with ``if`` statements.
+  
+  - Switch between < and > as needed
+  - Set the distance limit
 
-    * Change ``<`` to ``>`` in the dropdown menu
-    * Modify the number to adjust the threshold condition
+  .. image:: img/block/ultra_condition.png
 
-.. image:: img/block/ultra_condition.png
+* **Distance Value Block**
+  
+  Shows the current distance reading from the ultrasonic sensor in centimeters.
 
-This is a conditional block that returns TRUE if the distance detected by the ultrasonic sensor is indeed less than 15cm, otherwise FALSE. It is commonly used in blocks requiring conditionals like ``if``. You can:
-
-    * Change ``<`` to ``>`` in the dropdown menu
-    * Modify the number to adjust the threshold condition
-
-.. image:: img/block/ultra_value.png
-
-This block displays the current distance measured by the ultrasonic sensor.
-
-
-
-
-.. Servo-Related Blocks
-.. -------------------------------
-
-.. .. image:: img/block/servo_set_angle.png
-
-.. This block is used to set the servo angle. The range is 0 to 180 degrees (however, due to structural limitations, the actual usable range is 0-135 degrees).
-
-.. .. image:: img/block/servo_increase_angle.png
-
-.. This block increases (or decreases) the servo angle. The value can be negative.
+  .. image:: img/block/ultra_value.png
 
 
-.. .. image:: img/block/servo_value.png
-
-.. The current angle of the servo.

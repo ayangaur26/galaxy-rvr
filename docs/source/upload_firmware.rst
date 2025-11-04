@@ -15,47 +15,84 @@
 
 .. _update_firmware:
 
+Updating the ESP32 Firmware
+==============================
 
-Updating the ESP32 Firmware File
-======================================
+Your device may not have the latest firmware due to product iterations. To ensure stable performance, follow the steps below to check and update the firmware on your ESP32.
 
-This product has undergone several iterations, and the firmware on your device may not be the latest version. You need to check and update the firmware on your ESP32. Please follow the steps below to proceed.
+#. Start the GalaxyRVR.
 
-1. Download the firmware file.
+   * When using GalaxyRVR for the first time, it is recommended to fully charge the battery by plugging in a Type-C USB cable. Then, turn on the power.
+    
+     .. raw:: html
 
-    * :download:`GalaxyRVR Firmware File <https://github.com/sunfounder/galaxy-rvr/releases/download/1.2.0/galaxy-rvr-1.2.0.zip>`
+        <video width="600" loop autoplay muted>
+            <source src="_static/video/play_start.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
 
-2. Connect your mobile devices (such as phones or tablets) to the WiFi hotspot emitted by the GalaxyRVR. 
-Typically, the SSID is ``GalaxyRVR``, and the password is ``12345678``.
+   * To activate the ESP32 CAM, switch the mode to **Run** and press the **reset** button to reboot the R3 board. You will see the light on the bottom strip start flashing, indicating that the device has started.
 
-.. image:: img/firmware/SSID.png
+     .. raw:: html
 
-.. note:: The default connection mode is **AP mode**. After connecting, you may receive a warning that there is no internet access on this network. If so, opt to "Stay connected".
+        <video width="600" loop autoplay muted>
+            <source src="_static/video/play_reset.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
 
-    .. image:: img/app/camera_stay.png
+#. Download the firmware file.
 
-3. Navigate to http://192.168.4.1 to access the ESP32 Cam firmware update interface.
+   * :download:`GalaxyRVR Firmware File <https://github.com/sunfounder/galaxy-rvr/releases/download/1.2.0/galaxy-rvr-1.2.0.zip>`
 
-.. image:: img/firmware/OTAUpdate.jpg
+#. Extract the downloaded file and transfer the file ``ai-camera-firware.ino.x.x.x.bin`` to your mobile device. You can use any file transfer app, such as ES File Explorer or File Transfer Assistant.
 
-4. Check the version number. If your version is above ``1.5.1``, no update is necessary (skip steps 5-9). Otherwise, an upgrade is required.
+   .. image:: img/firmware/selectBin.png
+        :width: 400px
+        :align: center
 
-.. image:: img/firmware/OTAversion.jpg
+#. Connect your mobile device to the GalaxyRVR WiFi hotspot.
 
-5. Transfer the file ``ai-camera-firware.ino.1.5.1.bin`` to the device.
+   * The default SSID is ``GalaxyRVR`` and the password is ``12345678``.  
+   * If a warning appears about no internet access, select **“Stay connected”**.
 
-.. image:: img/firmware/selectBin.png
 
-6. Return to the firmware update interface. Click to select the firmware.
+   .. image:: img/firmware/SSID.png
+        :width: 400px
+        :align: center
+       
+#. On your mobile device, open a browser and navigate to ``http://192.168.4.1`` to access the ESP32 Cam firmware update page.
 
-.. image:: img/firmware/OTASButton.jpg
+   .. image:: img/firmware/OTAUpdate.jpg
+        :width: 400px
+        :align: center
 
-7. Select the ``ai-camera-firware.ino.1.5.1.bin`` file you just stored on your mobile device, then click upgrade.
+#. Check the firmware version. 
 
-.. image:: img/firmware/OTASelect.jpg
+   * If your version number is higher than ``1.5.1``, no update is required (you can skip the following steps).  
+   * If it is lower, proceed with the upgrade.
 
-8. Wait for the firmware upgrade to complete. Once the current version number shows as 1.5.1, the upgrade is successful.
+   .. image:: img/firmware/OTAversion.jpg
+        :width: 400px
+        :align: center
 
-.. image:: img/firmware/OTAFinish.jpg
+#. Return to the update interface and click the button to select the firmware.
 
-9. Close the page.
+   .. image:: img/firmware/OTASButton.jpg
+        :width: 400px
+        :align: center
+
+#. Select the ``ai-camera-firware.ino.x.x.x.bin`` file that you previously stored on your mobile device, then click **Upgrade**.
+
+   .. image:: img/firmware/OTASelect.jpg
+        :width: 400px
+        :align: center
+
+#. Wait for the firmware upgrade to complete. 
+
+   * Once the version number shows ``x.x.x``, the update is successful.  
+   * You can now close this page and move on to the next chapter.
+
+   .. image:: img/firmware/OTAFinish.jpg
+        :width: 400px
+        :align: center
+

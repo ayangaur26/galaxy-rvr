@@ -12,20 +12,12 @@
 
     👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
 
-Lesson 11 Servo and Tilt Mechanism
+Lesson 11: Control Your Rover's Camera Tilt
 ===============================================================
 
-Welcome back, young explorers! In today's adventure, we are going to delve into the fascinating world of the Mars Rover's visual system. Just like our eyes and neck work together to help us see and navigate our surroundings, our Rover too needs a similar system to navigate the treacherous Martian landscape. And that's exactly what we are going to build today!
+Give your Mars Rover a moving camera! Just like you can nod your head up and down, your rover can now tilt its camera to explore the Martian landscape from different angles.
 
-The visual system of our Rover has two main parts: a camera that acts as its "eyes", and a tilt mechanism that acts like a "neck", allowing it to look up and down. By the end of this lesson, we'll give our Rover the ability to "see" and "nod"!
-
-First, we'll build the tilt mechanism - a device that will hold our Rover's camera and let it rotate vertically. It's like giving our Rover a neck, so it can nod its "head" or camera up and down!
-
-Next, we'll learn about the servo, the tiny yet powerful "muscle" that moves our tilt mechanism. We'll understand how it works and how we can control it using Arduino programming.
-
-Just as our neck muscles move our head so our eyes can get a better view, the servo will move the tilt mechanism so the Rover's camera can better survey the Martian landscape.
-
-So, buckle up, explorers, let's start our mission to equip our Rover with its very own visual system!
+We'll use a special motor called a "servo" that can move to exact positions - perfect for controlling your rover's camera tilt. Learn how to program the servo to look up at Martian mountains or down at interesting rocks!
 
 .. raw:: html
 
@@ -34,185 +26,154 @@ So, buckle up, explorers, let's start our mission to equip our Rover with its ve
         Your browser does not support the video tag.
     </video>
 
-
-
 Learning Objectives
 -------------------------
 
-* Introduce the working principles of servo motors and their application in mechanical control.
-* Learn how to easily set servo angles using Mammoth Coding, achieving precise control.
-* Design interactive projects on the Mammoth Coding platform that enable physical interaction through servo motors.
-
-
-Materials
---------------------
-
-* Smartphone or tablet
-* Mammoth Coding APP
-* GalaxyRVR
+* Discover how servo work 
+* Learn to control camera angles using simple code blocks
+* Create interactive projects that let you tilt the camera with touch controls
 
 What is a Servo?
 ----------------------------------------
 
-Have you ever watched a puppet show? If you have, you might have marveled at how the puppeteer can make the puppet's arms, legs, and head move so smoothly, just by pulling on some strings. In a way, servo motors are like our puppeteers.
+Meet the servo - your robot's moving muscle! 
 
-.. image:: ../img/puppet_show.png
-    :width: 200
+Just like you can move your arm to exactly the right position, a servo motor can move to specific angles and hold them perfectly. Think of it as a smart motor that knows exactly where to stop.
+
+.. image:: img/servo.png
     :align: center
 
-Servo motors are special types of motors that don't just spin around like a wheel. Instead, they can move to a specific position and hold that position. Imagine if you're playing a game of Simon says, and Simon says, "Raise your arm to a 90-degree angle!" You can do it, right? That's because, like a servo, you can control exactly how much to move your arm.
+**Simple Connections:**
 
-.. image:: ../img/servo.png
-    :align: center
+- Brown wire: Ground (-)
+- Red wire: Power (+)
+- Orange wire: Signal (tells the servo where to move)
 
-* Brown Line: GND
-* Orange Line: Signal pin, connect to the PWM pin of the main board.
-* Red wire: VCC
-
-Just like you can control your arms to move to specific positions, we can use servo motors to control the exact position of objects in our projects. In our Mars Rover, we will use a servo to control the up and down movement of our tilt mechanism, just like how you can nod your head up and down.
-
-In the next step, we will go on a fascinating journey inside a servo motor to understand how it works. Excited? Let's go!
-
+In your Mars Rover, the servo acts like a nodding head - moving the camera up and down to capture the perfect view!
 
 How does a Servo Work?
 -------------------------------------------
 
-So how does a servo work its magic? Let's go on an exciting journey inside a servo!
+Inside every servo, there's a smart team working together:
 
-If we were to peek inside a servo, we would see a few parts. At the heart of a servo is a regular motor, very similar to the motors that spin our Mars Rover's wheels. Wrapped around the motor, there is a big gear that is connected to a smaller gear on the motor shaft. This is how the motor's fast, circular motion gets transformed into slower but stronger motion.
-
-.. image:: ../img/servo_internal.png
+.. image:: img/servo_internal.png
     :align: center
 
-But that's not what makes a servo special. The magic happens in a tiny piece of electronics called a "potentiometer" and the "control circuitry". Here's how it works: when the servo moves, the potentiometer turns and changes its resistance. The control circuitry measures this change in resistance and knows exactly what position the servo is in. Clever, isn't it?
+1. **Regular Motor** - Spins fast like your rover's wheels
+2. **Gears** - Slow down the motion and make it stronger
+3. **Brain Circuit** - Knows exactly what position the servo is in
+4. **Position Sensor** - Reports back where the servo is pointing
 
-To control a servo, we send it a special kind of signal called a "pulse-width modulation" signal or PWM. By changing the width of these pulses, we can control exactly how much the servo moves and hold it in that position.
+We control servos using special signals that say "move to this exact angle!" It's like telling a friend exactly how far to turn their head.
 
-In the next step, we'll learn how to control a servo using an APP. Ready for some magic spells in the form of code? Let's go!
-
-
-
-Exploring the Mars Rover Tilt System
--------------------------------------------------
+Ready to make your servo dance? Let's start programming!
 
 
-**Setting the Gimbal Angle**
+Control Your Rover's Tilt System
+--------------------------------------------
 
-1. Check the servo angle, and you can see the current angle on the stage.
+Let's learn to control your Mars Rover's tilt system - the part that moves the camera up and down like a nodding head!
 
-.. image:: img/10_servo_angle.png
+**Setting the Camera Angle**
 
-2. Drag a ``set servo angle to 90 degrees`` block. Click it, and you'll see the GalaxyRVR face forward.
+1. First, :ref:`app_connect`.
 
-.. image:: img/10_servo_set_angle.png
+2. Check the current servo angle - you'll see it displayed on the stage.
 
+   .. image:: img/10_servo_angle.png
 
-3. Change the value to 45 and click it, you'll see the GalaxyRVR look up.
+3. Drag a ``set servo angle to 90 degrees`` block. Click it to make your rover face forward.
 
-.. image:: img/10_servo_set_angle_45.png
+   .. image:: img/10_servo_set_angle.png
 
-4. Through multiple trials, you'll discover that the GalaxyRVR's gimbal can move between 0 and 135 degrees. As the angle increases, the gimbal lowers.
+4. Change the value to 45 and click - now your rover looks up at the Martian sky!
 
+   .. image:: img/10_servo_set_angle_45.png
 
-**Changing the Gimbal Angle**
+5. Experiment with different angles! You'll discover your rover can tilt between 0-135 degrees.
 
-1. The GalaxyRVR's servo gimbal system is a refined single-degree-of-freedom structure, so you only need to control its "reset," "move up," and "move down" functions.
+**Creating Camera Controls**
 
+1. Let's build a control panel for your rover's camera:
 
-.. raw:: html
+2. Create a reset button - drag a ``when this sprite clicked`` block.
 
-   <br></br>
+   .. image:: img/10_servo_when_click.png
 
+3. Add ``set servo angle to 90 degrees`` to make the camera face forward again.
 
-2. Now let's create its reset button. Drag a ``when this sprite clicked`` block.
+   .. image:: img/10_servo_when_90.png
 
-.. image:: img/10_servo_when_click.png
+4. Add up/down controls - drag ``when up arrow key pressed`` and ``when down arrow key pressed`` blocks.
 
-3. Embed a ``set servo angle to 90 degrees`` block to make the gimbal face forward.
+   .. image:: img/10_servo_when_up.png
 
-.. image:: img/10_servo_when_90.png
+5. Program the up arrow to decrease the angle (look up).
 
+   .. image:: img/10_servo_when_up2.png
 
-4. Drag a ``when up arrow key pressed`` block.
+6. Program the down arrow to increase the angle (look down).
 
-.. image:: img/10_servo_when_up.png
+   .. image:: img/10_servo_when_down.png
 
-5. Decrease the servo angle when the up arrow key is pressed.
-
-.. image:: img/10_servo_when_up2.png
-
-6. Similarly, add a down arrow key event to make the gimbal look down.
-
-.. image:: img/10_servo_when_down.png
-
-Now, click the full-screen button to enlarge the stage. Click up and down to adjust the gimbal angle, and click the sprite to reset the angle.
-
+Now click the full-screen button and take control! Use the arrow keys to adjust your rover's view, and click the sprite to reset. You're the camera operator!
 
 .. _tilt_system:
 
-Touch the Stage Area to Adjust the Gimbal Angle
+Touch Control for Camera Angle
 -------------------------------------------------------------
 
-Next, we will use an arrow sprite to achieve smoother adjustments to the servo angle.
+Create a touch-controlled camera! Drag an arrow to point your rover's camera exactly where you want it.
 
-When we touch the arrow, we can drag the direction of the arrow sprite.
+1. Clear the stage by deleting any existing sprites.
 
-1. Delete the original sprite.
+   .. image:: img/6_animate_delete.png
 
-.. image:: img/6_animate_delete.png
+2. Add an Arrow sprite to use as your touch controller.
 
-2. Add an Arrow sprite. We will set the gimbal direction based on its orientation.
+   .. image:: img/10_servo_arrow.png
 
-.. image:: img/10_servo_arrow.png
+3. Start with ``when this sprite clicked`` to begin touch control.
 
+   .. image:: img/6_animate_when_touch.png
+       :width: 200
 
-3. A ``when this sprite clicked`` block is exactly what we need.
+4. Create a loop that runs while you're touching the arrow.
 
-.. image:: img/6_animate_when_touch.png
-    :width: 200
+   .. image:: img/6_animate_repeat_touching.png
+       :width: 400
 
-4. Let the program repeat until we release it, meaning we no longer touch the sprite.
+5. Make the arrow point toward your finger as you drag.
 
-.. image:: img/6_animate_repeat_touching.png
-    :width: 400
+   .. image:: img/10_servo_arrow_point_toward.png
+       :width: 400
 
-5. Drag a ``point towards touch_position`` block to make the sprite face the touch position.
+6. Link the arrow's direction to the camera angle - rotate the arrow, move the camera!
 
-.. image:: img/10_servo_arrow_point_toward.png
-    :width: 400
+   .. image:: img/10_servo_arrow_angle_direction.png
+       :width: 800
 
+7. Set limits to keep the camera between 0-135 degrees.
 
-6. Drag a ``set servo angle to 90 degrees`` block and embed a ``direction`` block to align the gimbal angle with the arrow sprite's orientation. This way, when we change the arrow sprite's direction (i.e., touch the stage area), we can change the gimbal angle.
+   .. image:: img/10_servo_arrow_135.png
+       :width: 400
 
-.. image:: img/10_servo_arrow_angle_direction.png
-    :width: 800
+   .. image:: img/10_servo_arrow_0.png
+       :width: 400
 
-7. Add a limit check to ensure the arrow sprite's orientation does not exceed 135 degrees.
+Touch and drag the arrow to aim your rover's camera! Make the arrow move smoothly and respond instantly to your touch for a realistic control feel.
 
-.. image:: img/10_servo_arrow_135.png
-    :width: 400
-
-8. Similarly, ensure its orientation does not go below 0 degrees.
-
-.. image:: img/10_servo_arrow_0.png
-    :width: 400
-
-Touch the sprite, and it will change direction as you drag, altering the gimbal angle.
-
-If you find it easy to slide your finger off the arrow sprite, you can increase the sprite's size accordingly.
-
-
-Servo-Related Blocks
+Servo Control Blocks
 -------------------------------
 
-.. image:: img/block/servo_set_angle.png
+* Set the servo to a specific angle (0-135 degrees)
 
-This block is used to set the servo angle. The range is 0 to 180 degrees (however, due to structural limitations, the actual usable range is 0-135 degrees).
+  .. image:: img/block/servo_set_angle.png
 
-.. image:: img/block/servo_increase_angle.png
+* Increase or decrease the servo angle (use negative numbers to decrease)
 
-This block increases (or decreases) the servo angle. The value can be negative.
+  .. image:: img/block/servo_increase_angle.png
 
-.. image:: img/block/servo_value.png
+* Check the current servo angle
 
-The current angle of the servo.
+  .. image:: img/block/servo_value.png
