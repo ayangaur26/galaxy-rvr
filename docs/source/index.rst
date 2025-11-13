@@ -60,7 +60,7 @@ Choose your path based on your interests and skill level:
 
     About this Kit <self>
     assemble_video
-    upload_firmware
+    update_firmware
     quick_start/quick_start
     arduino/programming_arduino
     scratch/scratch

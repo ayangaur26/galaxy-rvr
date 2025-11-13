@@ -42,42 +42,37 @@ Learning Objectives
 Connecting the APP to GalaxyRVR
 -------------------------------------------
 
-.. note::  
+.. note::
 
-    * The GalaxyRVR's R3 board comes preloaded with communication firmware that enables connectivity with both the RoboPilot remote control APP and Mammoth Coding software. 
-    * If your board's firmware has been overwritten and you need to restore this communication capability, follow the steps in :ref:`restore_r3_firmware`.
+    * The GalaxyRVR’s R3 board comes with firmware that supports the RoboPilot App and Mammoth Coding.
+    * If you have overwritten the firmware and need to restore communication, follow :ref:`update_r3_firmware`.
 
-#. Start the GalaxyRVR.
-
-   * When using GalaxyRVR for the first time, it is recommended to fully charge the battery by plugging in a Type-C USB cable. Then, turn on the power.
+#. Before using the GalaxyRVR for the first time, fully charge the battery with the supplied Type-C USB cable. After charging, turn the power on.
     
-     .. raw:: html
+   .. raw:: html
 
         <video width="600" loop autoplay muted>
             <source src="../_static/video/play_start.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
 
-   * To activate the ESP32 CAM, switch the mode to **Run** and press the **reset** button to reboot the R3 board. You will see the light on the bottom strip start flashing, indicating that the device has started.
+#. To start the ESP32 CAM, switch the mode to **Run** and press the **Reset** button on the R3 board. The bottom light strip will begin flashing to indicate a successful startup.
 
-     .. raw:: html
+   .. note::
+
+      * If the bottom light strip shows a **flashing light of any color other than green**, your GalaxyRVR needs a firmware update. Please refer to :ref:`update_firmware`.
+
+   .. raw:: html
 
         <video width="600" loop autoplay muted>
-            <source src="../_static/video/play_reset.mp4" type="video/mp4">
+            <source src="../_static/video/play_reset_green.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
 
-#. Connect to the ``GalaxyRVR`` Network
+#. Connect your mobile device to the GalaxyRVR's WiFi network.
 
-   To establish communication between your mobile device and the Rover, connect to the GalaxyRVR's local network:
-
-   * On your mobile device, select ``GalaxyRVR`` from available networks
-   * Enter password: ``12345678``
-
-     .. note::
-
-         * This connects to the GalaxyRVR hotspot only (no internet access)
-         * If prompted, choose "Stay connected"
+   * The network name (SSID) is ``GalaxyRVR`` and the password is ``12345678``.  
+   * If you see a warning stating "No Internet access," please choose the option to **"Stay connected."**
 
      .. image:: ../img/camera_lan.png
         :width: 500

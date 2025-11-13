@@ -17,16 +17,16 @@
 Quick Start
 ===================
 
-This chapter helps you **quickly start controlling your GalaxyRVR** in different ways.  
-You can either **use the RoboPilot App** for instant remote driving, or **open and run the provided example codes** in **Arduino IDE** or **Mammoth Coding** to experience its programmable features — no need to write any code from scratch.
+This chapter helps you quickly begin using your GalaxyRVR.  
+You can control it with the RoboPilot App or run the ready-made example codes in Arduino IDE or Mammoth Coding—no coding required.
 
-GalaxyRVR supports the following control options:
+GalaxyRVR supports three control methods:
 
-* **RoboPilot App** – A mobile-based remote control app that lets you easily drive and operate your GalaxyRVR.  
-* **Arduino IDE** – A PC-based development environment where you can open and upload our ready-made example codes to control the GalaxyRVR.  
-* **Mammoth Coding** – A visual programming platform that allows you to load and run sample projects using intuitive drag-and-drop blocks.  
+- **RoboPilot App**: Drive and operate the GalaxyRVR from your mobile device.
+- **Arduino IDE**: Open and upload example codes to control the rover.
+- **Mammoth Coding**: Use drag-and-drop blocks to load and run sample projects.
 
-In this chapter, you can choose to **control GalaxyRVR with the RoboPilot App**, or **quickly get started by opening and testing our example codes** for **Arduino IDE** and **Mammoth Coding**.
+You may choose any of the above methods to start controlling your GalaxyRVR.
 
 ----
 
@@ -36,9 +36,7 @@ Download the example codes from the link below:
 
     * :download:`GalaxyRVR Code File <https://github.com/sunfounder/galaxy-rvr/archive/refs/heads/1.2.x.zip>`
 
-Or explore them on GitHub:  
-
-`SunFounder GalaxyRVR Kit for Arduino - GitHub <https://github.com/sunfounder/galaxy-rvr/tree/1.2.x>`_
+Or explore them on `SunFounder GalaxyRVR Kit for Arduino - GitHub <https://github.com/sunfounder/galaxy-rvr/tree/1.2.x>`_
 
 ----
 

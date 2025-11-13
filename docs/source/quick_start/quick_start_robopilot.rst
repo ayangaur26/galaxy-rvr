@@ -17,61 +17,52 @@
 Quick Play with APP
 =========================
 
-Eager to kick off your Mars exploration adventure right away? 
-With our app's specially designed quick-start feature, you can launch your mission immediately after assembling your GalaxyRVR!
+Ready to start your Mars adventure?  
+With the RoboPilot App’s quick-start feature, you can begin exploring as soon as your GalaxyRVR is assembled.
 
-The app comes with pre-loaded programs, allowing you to experience all the exciting functions of GalaxyRVR without any programming. Through the intuitive RoboPilot interface, you can:
+With RoboPilot, you can:
 
-- Drive the Mars rover from a first-person perspective
-- Switch between obstacle avoidance and follow modes
-- Control the rover's movement and steering in real-time
+- Drive the rover from a first-person perspective  
+- Switch between three control modes: **Remote**, **Avoid**, and **Follow**  
+  
 
-.. image:: img/rp1_inter.png
+.. note::
 
-Before embarking on your journey to explore the Red Planet, make sure you're fully prepared. The quick guide below will help you smoothly begin this exciting adventure!
-
-.. note::  
-
-    * The GalaxyRVR's R3 board comes preloaded with communication firmware that enables connectivity with both the RoboPilot remote control APP and Mammoth Coding software. 
-    * If your board's firmware has been overwritten and you need to restore this communication capability, follow the steps in :ref:`restore_r3_firmware`.
-
+    * The GalaxyRVR’s R3 board comes with firmware that supports the RoboPilot App and Mammoth Coding.
+    * If you have overwritten the firmware and need to restore communication, follow :ref:`update_r3_firmware`.
 
 Quick Guide
 ---------------------
 
-#. Start the GalaxyRVR.
-
-   * When using GalaxyRVR for the first time, it is recommended to fully charge the battery by plugging in a Type-C USB cable. Then, turn on the power.
+#. Before using the GalaxyRVR for the first time, fully charge the battery with the supplied Type-C USB cable. After charging, turn the power on.
     
-     .. raw:: html
+   .. raw:: html
 
         <video width="600" loop autoplay muted>
             <source src="../_static/video/play_start.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
 
-   * To activate the ESP32 CAM, switch the mode to **Run** and press the **reset** button to reboot the R3 board. You will see the light on the bottom strip start flashing, indicating that the device has started.
+#. To start the ESP32 CAM, switch the mode to **Run** and press the **Reset** button on the R3 board. The bottom light strip will begin flashing to indicate a successful startup.
 
-     .. raw:: html
+   .. note::
+
+      * If the bottom light strip shows a **flashing light of any color other than green**, your GalaxyRVR needs a firmware update. Please refer to :ref:`update_firmware`.
+
+   .. raw:: html
 
         <video width="600" loop autoplay muted>
-            <source src="../_static/video/play_reset.mp4" type="video/mp4">
+            <source src="../_static/video/play_reset_green.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+      
 
 #. Install **RoboPilot** from **APP Store(iOS)** or **Google Play(Android)**.
 
-#. Connect to the ``GalaxyRVR`` Network
+#. Connect your mobile device to the GalaxyRVR's WiFi network.
 
-   To establish communication between your mobile device and the Rover, connect to the GalaxyRVR's local network:
-
-   * On your mobile device, select ``GalaxyRVR`` from available networks
-   * Enter password: ``12345678``
-
-     .. note::
-
-        * This connects to the GalaxyRVR hotspot only (no internet access)
-        * If prompted, choose "Stay connected"
+   * The network name (SSID) is ``GalaxyRVR`` and the password is ``12345678``.  
+   * If you see a warning stating "No Internet access," please choose the option to **"Stay connected."**
 
      .. image:: ../img/camera_lan.png
         :width: 500
