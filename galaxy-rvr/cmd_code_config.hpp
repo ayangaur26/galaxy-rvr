@@ -16,8 +16,7 @@
 #define COLOR_ERROR RED
 #define COLOR_WARN ORANGE
 
-#define COLOR_STATE_IDLE                    WHITE
-#define COLOR_STATE_IR_REMOTE               GREEN_CYAN
+#define COLOR_STATE_IDLE                    GREEN
 #define COLOR_STATE_APP                     MAGENTA
 
 #define MODE_OBSTACLE_FOLLOWING_COLOR       BLUE
