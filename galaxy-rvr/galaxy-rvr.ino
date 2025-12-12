@@ -24,7 +24,7 @@
            https://docs.sunfounder.com
 
 ********************************************************************/
-#define VERSION "1.2.0.a1"
+#define VERSION "1.2.0.a2"
 
 #include "galaxy-rvr.h"
 
@@ -41,7 +41,7 @@ uint8_t currentState = STATE_IDLE;
 // last state
 uint8_t lastState = 255;
 // obstacle power
-uint8_t obstaclePower = 0;
+uint8_t obstaclePower = DEFAULT_OBSTACLE_POWER;
 // last mode
 uint8_t lastMode = 255;
 /* variables of motors and servo*/
@@ -225,12 +225,12 @@ void obstacleFollowing() {
   } else if (usDistance < 10 && usDistance > 0) {
     carForward(30);
   } else if (usDistance < FOLLOW_DISTANCE && usDistance > 0) {
-    carForward(OBSTACLE_FOLLOW_POWER);
+    carForward(obstaclePower);
   } else {
     if (!leftIsClear) {
-      carTurnLeft((int8_t)OBSTACLE_FOLLOW_POWER);
+      carTurnLeft((int8_t)obstaclePower);
     } else if (!rightIsClear) {
-      carTurnRight(OBSTACLE_FOLLOW_POWER);
+      carTurnRight(obstaclePower);
     } else {
       carStop();
     }
@@ -251,21 +251,21 @@ void obstacleAvoidance() {
 
   if (middleIsClear && leftIsClear && rightIsClear) {  // 111
     last_forward = true;
-    carForward(OBSTACLE_AVOID_POWER);
+    carForward(obstaclePower);
   } else {
     if ((leftIsClear && rightIsClear) || (!leftIsClear && !rightIsClear)) {  // 101, 000, 010
-      if (last_clear == 1) carTurnLeft(OBSTACLE_AVOID_POWER);
-      else carTurnRight(OBSTACLE_AVOID_POWER);
+      if (last_clear == 1) carTurnLeft(obstaclePower);
+      else carTurnRight(obstaclePower);
       last_forward = false;
     } else if (leftIsClear) {  // 100, 110
       if (last_clear == 1 || last_forward == true) {
-        carTurnLeft(OBSTACLE_AVOID_POWER);
+        carTurnLeft(obstaclePower);
         last_clear = 1;
         last_forward = false;
       }
     } else if (rightIsClear) {  // 001, 011
       if (last_clear == -1 || last_forward == true) {
-        carTurnRight(OBSTACLE_AVOID_POWER);
+        carTurnRight(obstaclePower);
         last_clear = -1;
         last_forward = false;
       }

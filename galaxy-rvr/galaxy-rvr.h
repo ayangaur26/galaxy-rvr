@@ -60,8 +60,7 @@
 
 /** Configure the motors speed in different modes */
 #define SPEECH_REMOTE_POWER 60
-#define OBSTACLE_AVOID_POWER 65
-#define OBSTACLE_FOLLOW_POWER 65
+#define DEFAULT_OBSTACLE_POWER 65
 
 /** Configure the follow distance of obstacle follow */
 #define FOLLOW_DISTANCE 20
