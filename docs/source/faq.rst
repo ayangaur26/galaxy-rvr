@@ -9,26 +9,26 @@
 
 .. note::
 
-   若要修改 Wi-Fi 信道，ESP32 CAM 固件版本需为 1.4.1 及以上。更多信息请参阅 :ref:`update_firmware` 。
+   若要修改 Wi-Fi 信道，ESP32 CAM 固件版本需为 1.4.2 及以上。更多信息请参阅 :ref:`update_firmware` 。
 
 #. 打开 GalaxyRVR 电源。将模式拨至 **Run** 位置以启用 ESP32 CAM，并按下 **reset** 按钮重启 R3 主控板。
 
-     .. raw:: html
+   .. raw:: html
 
-        <video width="600" loop autoplay muted>
-            <source src="_static/video/play_reset.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+      <video width="600" loop autoplay muted>
+          <source src="_static/video/play_reset.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
 
 #. 在手机或平板设备的 Wi-Fi 列表中找到 ``GalaxyRVR``，输入密码 ``12345678`` 并连接。
 
-     .. note::
+   .. note::
 
-        * 当前为连接至 GalaxyRVR 热点模式，无互联网访问。如果系统提示切换网络，请选择“保持连接”。
-        * :ref:`ap_to_sta`
+      * 当前为连接至 GalaxyRVR 热点模式，无互联网访问。如果系统提示切换网络，请选择“保持连接”。
+      * :ref:`ap_to_sta`
 
-     .. image:: img/app/camera_lan.png
-        :width: 500
+   .. image:: img/app/camera_lan.png
+      :width: 500
 
 #. 在浏览器中输入 ``http://192.168.4.1`` ，进入 ESP32 CAM OTA 更新页面。
 
@@ -61,26 +61,26 @@
 
 #. 打开 GalaxyRVR 电源，将模式拨至 **Run** ，并按下 **reset** 按钮重启 R3 主控板。
 
-     .. raw:: html
+   .. raw:: html
 
-        <video width="600" loop autoplay muted>
-            <source src="_static/video/play_reset.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+      <video width="600" loop autoplay muted>
+          <source src="_static/video/play_reset.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
 
 #. 使用手机或平板连接 ``GalaxyRVR`` Wi-Fi，密码为 ``12345678`` 。
 
-     .. note::
+   .. note::
 
-        * 当前为 GalaxyRVR 热点，无互联网访问。如提示切换网络，请选择“保持连接”。
-        * :ref:`ap_to_sta`
+      * 当前为 GalaxyRVR 热点，无互联网访问。如提示切换网络，请选择“保持连接”。
+      * :ref:`ap_to_sta`
 
-     .. image:: img/app/camera_lan.png
+   .. image:: img/app/camera_lan.png
         :width: 500
 
-#. 点击下方链接下载固件 ``ai-camera-firmware-v1.4.1-ota.bin`` 并保存到设备。
+#. 点击下方链接下载固件 ``ai-camera-firmware-v1.4.2-ota.bin`` 并保存到设备。
 
-   * :download:`ESP32 CAM Firmware <https://github.com/sunfounder/ai-camera-firmware/releases/download/1.4.1/ai-camera-firmware-v1.4.1-ota.bin>`
+   * :download:`ESP32 CAM Firmware <https://github.com/sunfounder/ai-camera-firmware/releases/download/1.4.2/ai-camera-firmware-v1.4.2-ota.bin>`
 
 #. 打开浏览器并访问 ``http://192.168.4.1`` 进入 OTA 更新页面。
 
@@ -92,7 +92,7 @@
    .. image:: img/faq_cam_ota_choose.png
       :width: 400
 
-#. 选择刚下载的 ``ai-camera-firmware-v1.4.1-ota.bin`` 文件并点击 **OK** 。
+#. 选择刚下载的 ``ai-camera-firmware-v1.4.2-ota.bin`` 文件并点击 **添加** 。
 
    .. image:: img/faq_cam_ota_file.png
       :width: 400
@@ -102,7 +102,7 @@
    .. image:: img/faq_cam_ota_update.png
       :width: 400
 
-#. 等待更新完成。当页面上显示的版本号变为 ``1.4.1`` 时，表示更新成功。
+#. 等待更新完成。当页面上显示的版本号变为 ``1.4.2`` 时，表示更新成功。
 
    .. image:: img/faq_cam_ota_finish.png
       :width: 400
