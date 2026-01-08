@@ -22,11 +22,11 @@ The 2.4GHz Wi-Fi band has channels ranging from 1 to 13. ESP32 supports channels
 
 .. note::
 
-   ESP32 CAM firmware version 1.4.1 or above is required to change channels. Refer to :ref:`update_firmware` for more details.
+   ESP32 CAM firmware version 1.4.2 or above is required to change channels. Refer to :ref:`update_firmware` for more details.
 
 #. Power on the GalaxyRVR. To activate the ESP32 CAM, move the mode switch to the **Run** position, and press the **reset** button to reboot the R3 board.
 
-     .. raw:: html
+   .. raw:: html
 
         <video width="600" loop autoplay muted>
             <source src="_static/video/play_reset.mp4" type="video/mp4">
@@ -35,12 +35,12 @@ The 2.4GHz Wi-Fi band has channels ranging from 1 to 13. ESP32 supports channels
 
 #. Find ``GalaxyRVR`` on the list of available networks on your mobile device (tablet or smartphone), enter the password ``12345678``, and connect to it.
 
-     .. note::
+   .. note::
 
         * The current connection is to the GalaxyRVR hotspot, so there is no internet access. If prompted to switch networks, please choose "Stay connected".
         * :ref:`ap_to_sta`
 
-     .. image:: img/app/camera_lan.png
+   .. image:: img/app/camera_lan.png
         :width: 500
 
 #. Open a web browser on your mobile device and navigate to ``http://192.168.4.1`` to access the ESP32 CAM OTA update page.
@@ -91,9 +91,9 @@ Follow these detailed steps to update the firmware for your ESP32 CAM:
      .. image:: img/app/camera_lan.png
         :width: 500
 
-#. Click the link below to download the firmware file ``ai-camera-firmware-v1.4.1-ota.bin`` and save it to your mobile device.
+#. Click the link below to download the firmware file ``ai-camera-firmware-v1.4.2-ota.bin`` and save it to your mobile device.
 
-   * :download:`ESP32 CAM Firmware <https://github.com/sunfounder/ai-camera-firmware/releases/download/1.4.1/ai-camera-firmware-v1.4.1-ota.bin>`
+   * :download:`ESP32 CAM Firmware <https://github.com/sunfounder/ai-camera-firmware/releases/download/1.4.2/ai-camera-firmware-v1.4.2-ota.bin>`
 
 #. Open a web browser on your mobile device and navigate to ``http://192.168.4.1`` to access the ESP32 CAM OTA update page.
 
@@ -105,7 +105,7 @@ Follow these detailed steps to update the firmware for your ESP32 CAM:
    .. image:: img/faq_cam_ota_choose.png
       :width: 400
 
-#. Choose the previously downloaded ``ai-camera-firmware-v1.4.1-ota.bin`` file from your device and click **OK**.
+#. Choose the previously downloaded ``ai-camera-firmware-v1.4.2-ota.bin`` file from your device and click **Add**.
 
    .. image:: img/faq_cam_ota_file.png
       :width: 400
@@ -115,7 +115,7 @@ Follow these detailed steps to update the firmware for your ESP32 CAM:
    .. image:: img/faq_cam_ota_update.png
       :width: 400
    
-#. Wait for the update to complete. Once the displayed version number changes to ``1.4.1``, the update is successful.
+#. Wait for the update to complete. Once the displayed version number changes to ``1.4.2``, the update is successful.
 
    .. image:: img/faq_cam_ota_finish.png
       :width: 400
@@ -123,6 +123,7 @@ Follow these detailed steps to update the firmware for your ESP32 CAM:
 #. After the update is complete, you can close the web browser. Press the **Reset** button to reboot the device. The ESP32 CAM is now ready for normal operation.
 
    .. image:: img/camera_reset.png
+      :with: 600
 
 .. _upload_galaxy_code:
 
@@ -385,7 +386,7 @@ Now follow the steps below.
     * ``left``: Let the rover turn left.
     * ``right``: Let the rover turn right.
 
-Q5: About the ESP32 CAM Firmware
+About the ESP32 CAM Firmware
 ---------------------------------------------------
 
 Here is the firmeware link of ESP32 CAM: |link_ai_camera_firmware|
