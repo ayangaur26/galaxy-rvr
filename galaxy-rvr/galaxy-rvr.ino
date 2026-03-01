@@ -136,28 +136,21 @@ bool cam_lamp_status = false;
  * Initialization of some peripherals
  */
 void setup() {
-  int m = millis();
-  Serial.begin(115200);
-  Serial.print("GalaxyRVR version "); Serial.println(VERSION);
+  // Initialize serial communication for debugging
+  Serial.begin(9600);
 
-  Serial.println(F("Initialzing..."));
-#if defined(ARDUINO_AVR_UNO)
-  SoftPWMBegin(); // init softpwm, before the motors initialization and the rgb LEDs initialization
-#endif
-  rgbBegin();
-  rgbWrite(ORANGE); // init hint
+  // Initialize sensors and motors
   carBegin();
   irObstacleBegin();
-  batteryBegin();
-  servo.attach(SERVO_PIN);
-  servo.write(90);
+  pinMode(ULTRASONIC_TRIG_PIN, OUTPUT);
+  pinMode(ULTRASONIC_ECHO_PIN, INPUT);
 
 #if !TEST
   aiCam.begin(SSID, PASSWORD, WIFI_MODE, PORT);
   aiCam.setOnReceived(onReceive);
 #endif
 
-  while (millis() - m < 500) {  // Wait for peripherals to be ready
+  while (millis() < 500) {  // Wait for peripherals to be ready
     delay(1);
   }
 
